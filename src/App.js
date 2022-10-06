@@ -7,6 +7,8 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 
 //pages
 import OurStory from './pages/OurStory';
+import Locations from './pages/Locations';
+import LocationDetails from './pages/LocationDetails'
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<OurStory/>} />
+          <Route path="/locations" element={<Locations/>} />
+          <Route path='/location/details/:location' element={<LocationDetails/>} />
         </Routes>
       </BrowserRouter>
     </>

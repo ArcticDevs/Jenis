@@ -77,16 +77,16 @@ const Footer = () => {
 					</button>
 				</div>
 			</div>
-			<div className='footer-body row px-3'>
-				<div className='footer-left bg-danger bg-opacity-10 col-lg-6 col-12'>
+			<div className='footer-body row'>
+				<div className='footer-left bg-danger bg-opacity-10 col-lg-6 col-12 ps-4'>
 					<h2 className='fs-4 fw-bold'>BE THE FIRST TO KNOW ABOUT NEW FLAVORS AND MORE</h2>
 					<form action="">
-						<div className='footer-form my-5'>
-							<div className='col-8'>
+						<div className='row footer-form my-5 '>
+							<div className='col-md-8 col-12 ps-3'>
 								<label htmlFor="email" className="form-label fw-bold">Your Email</label>
 								<input type="email" className="form-control" id="email" placeholder="name@email.com" />
 							</div>
-							<div className='col'>
+							<div className='col-md-4 col-12 ps-3'>
 								<label htmlFor="date" className="form-label fw-bold">Your Birthday</label>
 								<input type="date" className="form-control text-uppercase" id="date" />
 							</div>
@@ -152,8 +152,8 @@ const Footer = () => {
 						</div>
 					</div>
 					:
-					<div className='mob-footer'>
-						<div className='footer-menu'>
+					<div className='footer-mob-grid px-3 ps-4'>
+						<div className='footer-menu '>
 							{footerData.map((val, index) =>
 								<FooterSubMenu name={val.name} subData={val.subList} key={index} />
 							)}

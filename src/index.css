@@ -12,11 +12,11 @@
   font-display: swap;
 }
 
-.jeni-theme-text {
+.base-theme-text {
   color: var(--theme-color) !important;
 }
 
-.jeni-theme-back {
+.base-theme-back {
   background-color: var(--theme-color) !important;
 }
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import "../styles/Navbar.css";
-import Logo from '../assets/logo-colored.png'
+import Logo from '../assets/logo.png'
 import useBreakpoints from '../customHooks/useBreakpoints'
 // import { motion } from "framer-motion";
 import { MdSearch } from "react-icons/md"
@@ -231,7 +231,7 @@ const Navbar = () => {
                 </nav>
                 :
                 <nav className='desktop'>
-                    <div className={`nav-reward ${hideReward && "hide-nav-reward"}`}>Get the perks: Join Jeni's Splendid Rewards</div>
+                    <div className={`nav-reward ${hideReward && "hide-nav-reward"}`}>Get the perks: Join Lorem's Splendid Rewards</div>
                     <div className='nav-logo-section px-5 fixed-top'>
                         <div className="nav-logo">
                             <img src={Logo} alt="Logo" />

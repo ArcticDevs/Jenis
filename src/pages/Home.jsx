@@ -159,7 +159,7 @@ const section8Data = [
 	{
 		id: 2,
 		image: home_sec8_2,
-		head: "No one else makes ice cream like Jeni."
+		head: "No one else makes ice cream like Lorem."
 	},
 	{
 		id: 3,
@@ -240,28 +240,28 @@ const Home = () => {
 						<div className='home-sec5-grid--image'>
 							<img src={home_sec5_1} alt="" />
 						</div>
-						{/* <div className='home-sec5-grid--content'> */}
+						<div className='home-sec5-grid--content'>
 							<h3>Creative Flavors</h3>
 							<p>We make unforgettable, crave-worthy ice creams you simply won’t find anywhere else.</p>
-						{/* </div> */}
+						</div>
 					</div>
 					<div className='home-sec5-item'>
 						<div className='home-sec5-grid--image'>
 							<img src={home_sec5_2} alt="" />
 						</div>
-						{/* <div className='home-sec5-grid--content'> */}
+						<div className='home-sec5-grid--content'>
 							<h3>Unreal Texture</h3>
 							<p>Built completely from scratch, our flavors have an impossibly smooth, buttercream-like body.</p>
-						{/* </div> */}
+						</div>
 					</div>
 					<div className='home-sec5-item'>
 						<div className='home-sec5-grid--image'>
 							<img src={home_sec5_3} alt="" />
 						</div>
-						{/* <div className='home-sec5-grid--content'> */}
+						<div className='home-sec5-grid--content'>
 							<h3>A Force for Good</h3>
 							<p>From the way we make our ice creams to our scoop shops nationwide, we build community wherever we go.</p>
-						{/* </div> */}
+						</div>
 					</div>
 				</div>
 			</div>
@@ -299,7 +299,7 @@ const Home = () => {
 			<div className="home-section-7">
 				<div className="sec-head">
 					<h2>BEST SELLERS</h2>
-					<p>Easily the most memorable ice creams Jeni has ever created. Nothing flies out of our freezer faster than these tried-and-true best-sellers.</p>
+					<p>Easily the most memorable ice creams Lorem has ever created. Nothing flies out of our freezer faster than these tried-and-true best-sellers.</p>
 				</div>
 				<Carousel carouselData={carouselSection7} />
 			</div>
@@ -326,18 +326,20 @@ const Home = () => {
 			<div className="home-section-9">
 				<h3 className='mb-5'>FOLLOW US ON INSTAGRAM</h3>
 				<a href="https://instagram.com/jenisicecreams" target="_blank" rel="noopener noreferrer">@jenisicecreams</a>
-				<div className='sec9-grid mt-5'>
-					<div className='sec9-image'>
-						<img className='img-fluid' src={home_sec9_1} alt="" />
-					</div>
-					<div className='sec9-image'>
-						<img className='img-fluid' src={home_sec9_2} alt="" />
-					</div>
-					<div className='sec9-image'>
-						<img className='img-fluid' src={home_sec9_3} alt="" />
-					</div>
-					<div className='sec9-image'>
-						<img className='img-fluid' src={home_sec9_4} alt="" />
+				<div className='sec9-grid-wrap mt-5'>
+					<div className='sec9-grid'>
+						<div className='sec9-image'>
+							<img src={home_sec9_1} alt="" />
+						</div>
+						<div className='sec9-image'>
+							<img src={home_sec9_2} alt="" />
+						</div>
+						<div className='sec9-image'>
+							<img src={home_sec9_3} alt="" />
+						</div>
+						<div className='sec9-image'>
+							<img src={home_sec9_4} alt="" />
+						</div>
 					</div>
 				</div>
 			</div>

@@ -23,7 +23,7 @@ const App = () => {
             {/* <Suspense> */}
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />
-                <Route path="/" element={<OurStory />} />
+                <Route path="/our_story" element={<OurStory />} />
                 <Route path="/locations" element={<Locations />} />
                 <Route path="/location/details/:location" element={<LocationDetails />} />
             </Routes>

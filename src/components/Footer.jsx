@@ -6,22 +6,23 @@ import { MdLocationOn, MdIcecream } from 'react-icons/md'
 import { BsInstagram, BsTwitter } from 'react-icons/bs'
 import { GrFacebookOption } from 'react-icons/gr'
 import { BsChevronDown } from "react-icons/bs"
+import { Link } from 'react-router-dom'
 
 const footerData = [
 	{
 		id: 1,
 		name: "Shop",
-		subList: ["All Falvor", "Collections", "Pint Club", "Merch", "Gift Cards"]
+		subList: [{ head: "All Falvor", link: "/" }, { head: "Collections", link: "/" }, { head: "Pint Club", link: "/" }, { head: "Merch", link: "/" }, { head: "Gift Cards", link: "/" }]
 	},
 	{
 		id: 2,
 		name: "Company",
-		subList: ["Our Story", "Lorem", "Join Our Team", "Events", "Corporate", "Fundraising"]
+		subList: [{ head: "Our Story", link: "/" }, { head: "Lorem", link: "/" }, { head: "Join Our Team", link: "/" }, { head: "Events", link: "/" }, { head: "Corporate", link: "/" }, { head: "Fundraising", link: "/" }]
 	},
 	{
 		id: 3,
 		name: "Customer Service",
-		subList: ["Contact Us", "FAQ", "Shipping", "Ingredients", "Wholesales"]
+		subList: [{ head: "Contact Us", link: "/" }, { head: "FAQ", link: "/" }, { head: "Shipping", link: "/" }, { head: "Ingredients", link: "/" }, { head: "Wholesales", link: "/" }]
 	},
 ]
 
@@ -38,7 +39,7 @@ const FooterSubMenu = ({ name, subData }) => {
 				<div className={`footer-sub-menu ${show && "show-footer-menu"}`}>
 					<ul>
 						{subData.map((val, index) =>
-							<li key={index}>{val}</li>
+							<li key={index}><Link to={val.link} className="text-dark">{val.head}</Link></li>
 						)}
 					</ul>
 				</div>
@@ -117,32 +118,32 @@ const Footer = () => {
 							<div className='col d-flex flex-column'>
 								<h3 className='mb-4 fs-6 fw-bold text-uppercase'>SHOP</h3>
 								<ul className='p-0 m-0 d-flex flex-column gap-3'>
-									<li className='fs-6 fw-normal text-capitalize'>All Falvors</li>
-									<li className='fs-6 fw-normal text-capitalize'>Collections</li>
-									<li className='fs-6 fw-normal text-capitalize'>Pint Club</li>
-									<li className='fs-6 fw-normal text-capitalize'>Merch</li>
-									<li className='fs-6 fw-normal text-capitalize'>Gift Cards</li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>All Flavors</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Collections</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Pint Club</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Merch</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Gift Cards</Link></li>
 								</ul>
 							</div>
 							<div className='col d-flex flex-column'>
 								<h3 className='mb-4 fs-6 fw-bold text-uppercase'>Company</h3>
 								<ul className='p-0 m-0 d-flex flex-column gap-3'>
-									<li className='fs-6 fw-normal text-capitalize'>Our Story</li>
-									<li className='fs-6 fw-normal text-capitalize'>Lorem Britton</li>
-									<li className='fs-6 fw-normal text-capitalize'>Join our Team</li>
-									<li className='fs-6 fw-normal text-capitalize'>Events & catering</li>
-									<li className='fs-6 fw-normal text-capitalize'>Corporate Gifting</li>
-									<li className='fs-6 fw-normal text-capitalize'>Fundraising</li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/our_story" className='text-dark'>Our Story</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Lorem Britton</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Join our Team</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Events & catering</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Corporate Gifting</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Fundraising</Link></li>
 								</ul>
 							</div>
 							<div className='col d-flex flex-column'>
 								<h3 className='mb-4 fs-6 fw-bold text-uppercase'>Customer Service</h3>
 								<ul className='p-0 m-0 d-flex flex-column gap-3'>
-									<li className='fs-6 fw-normal text-capitalize'>Contact us</li>
-									<li className='fs-6 fw-normal text-capitalize'>FaQ</li>
-									<li className='fs-6 fw-normal text-capitalize'>Shipping & Returns</li>
-									<li className='fs-6 fw-normal text-capitalize'>Ingredients & Nutrition</li>
-									<li className='fs-6 fw-normal text-capitalize'>wholesale</li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Contact us</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>FaQ</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Shipping & Returns</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Ingredients & Nutrition</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>wholesale</Link></li>
 								</ul>
 							</div>
 						</div>

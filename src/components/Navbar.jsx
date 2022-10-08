@@ -121,13 +121,13 @@ const Navbar = () => {
                                     </button>
                                 </li>
                                 <li>
-                                    <Link to="/">Visit Us</Link>
+                                    <Link to="/locations">Visit Us</Link>
                                 </li>
                                 <li>
                                     <Link to="/">Grocery</Link>
                                 </li>
                                 <li>
-                                    <Link to="/">Our Story</Link>
+                                    <Link to="/our_story">Our Story</Link>
                                 </li>
                             </ul>
                             <div className='mob-footer'>
@@ -263,9 +263,9 @@ const Navbar = () => {
                         <li className={showDesktopMenu && showDesktopValue === "Delivery" ? "nav-hover" : undefined} onMouseEnter={() => handleDesktopHoverMenu(true, "Delivery")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
                             <Link to="/">Delivery</Link>
                         </li>
-                        <li><Link to="/">Visit Us</Link></li>
+                        <li><Link to="/locations">Visit Us</Link></li>
                         <li><Link to="/">Grocery</Link></li>
-                        <li><Link to="/">Our Story</Link></li>
+                        <li><Link to="/our_story">Our Story</Link></li>
                     </ul>
                     <div className='desktop-hover-menu-wrap' onMouseEnter={() => handleDesktopHoverMenu(true, "Shop")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
                         <div className={`desktop-hover-menu ${showDesktopMenu && showDesktopValue === "Shop" && "show-desktop-menu"}`}>

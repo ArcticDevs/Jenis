@@ -52,25 +52,40 @@ const Navbar = () => {
     }
 
     useEffect(() => {
-        window.onscroll = function () {
-            if (window.pageYOffset === 0 || window.scrollY===0) {
-                setHideLinks(false)
-                setHideReward(false)
-                document.getElementById("header").style.zIndex = 5;
-            }
-            if (window.scrollY > 5 ) {
-                setHideLinks(true)
-            }
-            if (window.scrollY > 7) {
-                document.getElementById("header").style.zIndex = 10;
-            }
-            if (window.scrollY > 120) {
-                setHideReward(true);
-            }
+        if (!isMd) {
+            window.onscroll = function () {
+                if (window.pageYOffset === 0 || window.scrollY === 0) {
+                    setHideLinks(false)
+                    setHideReward(false)
+                    document.getElementById("header").style.zIndex = 5;
+                }
+                if (window.scrollY > 5) {
+                    setHideLinks(true)
+                }
+                if (window.scrollY > 7) {
+                    document.getElementById("header").style.zIndex = 10;
+                }
+                if (window.scrollY > 120) {
+                    setHideReward(true);
+                }
 
-            return () => (window.onscroll = null);
-        };
-    })
+                return () => (window.onscroll = null);
+            };
+        }
+        else {
+            document.getElementById("header").style.zIndex = 10;
+            window.onscroll = function () {
+                if (window.pageYOffset === 0 || window.scrollY === 0) {
+                    setHideReward(false)
+                }
+                if (window.scrollY > 100) {
+                    setHideReward(true);
+                }
+
+                return () => (window.onscroll = null);
+            };
+        }
+    },[isMd])
 
     return (
         <header id='header'>

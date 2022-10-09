@@ -54,7 +54,7 @@ const Footer = () => {
 
 	return (
 		<div className='container-fluid p-0 footer'>
-			<div className="footer-head d-flex align-items-center bg-primary bg-opacity-25 py-5 px-3">
+			<div className="footer-head row m-0 d-flex align-items-center bg-primary bg-opacity-25 py-5 px-3">
 				<div className="col-lg-5 col-12">
 					<h2 className='fs-4 fw-bold'>NEED Lorem'S NOW?</h2>
 				</div>
@@ -77,7 +77,7 @@ const Footer = () => {
 					</button>
 				</div>
 			</div>
-			<div className='footer-body'>
+			<div className='footer-body row m-0'>
 				<div className='footer-left bg-danger bg-opacity-10 col-lg-6 col-12 ps-4'>
 					<h2 className='fs-4 fw-bold'>BE THE FIRST TO KNOW ABOUT NEW FLAVORS AND MORE</h2>
 					<form action="">

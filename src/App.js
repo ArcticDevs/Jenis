@@ -7,6 +7,7 @@ import Footer from "./components/Footer.jsx";
 import OurStory from "./pages/OurStory";
 import Locations from "./pages/Locations";
 import LocationDetails from "./pages/LocationDetails";
+import ContactUs from "./pages/ContactUs";
 
 // const Home = lazy(() => import('./pages/Home'));
 
@@ -39,6 +40,7 @@ const App = () => {
                 <Route path="/our_story" element={<OurStory />} />
                 <Route path="/locations" element={<Locations locationArr={locationArr}/>} />
                 <Route path="/location/details/:location" element={<LocationDetails locationArr={locationArr}/>} />
+                <Route path="/contact-us" element={<ContactUs/>} />
             </Routes>
             {/* </Suspense> */}
             <Footer />

@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/Locations.css";
 
-const LocationDetails = () => {
+const LocationDetails = ({locationArr}) => {
   const params = useParams();
   const [location, setLocation] = useState("");
 
   useEffect(() => {
     // console.log(params.location)
-    if (params.location === "atlanta-ga") {
-      setLocation("Atlanta, GA");
-    }
+    locationArr.map((curr) =>{
+      if (params.location === curr.value) {
+        setLocation(curr.name);
+      }
+    })
+    
   }, []);
 
   return (
@@ -28,7 +31,7 @@ const LocationDetails = () => {
         </div>
         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-11 col-sm-10 col-11">
           <h2 className="fw-bold">JENI'S WESTSIDE PROVISIONS</h2>
-          <h5 className="mt-3">Atlanta, GA</h5>
+          <h5 className="mt-3">{location && location}</h5>
           <p className="my-4 fw-bold">
             Address <br />
             <span className="text-danger">1198 Howell Mill</span> <br />{" "}

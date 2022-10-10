@@ -17,6 +17,19 @@ const App = () => {
         window.scrollTo(0, 0);
     }, [location]);
 
+    const locationArr = [
+        { name: "ATLANTA, GA", value: "atlanta-ga" },
+        { name: "BIRMINGHAM, AL", value: "Birmingham-al" },
+        { name: "CHARLESTON, SC", value: "charleston-sc" },
+        { name: "CHICAGO, IL", value: "chicago-il" },
+        { name: "DALLAS, TX", value: "dallas-tx" },
+        { name: "COLUMBUS, OH", value: "columbus-oh" },
+        { name: "CHARLOTTE, NC", value: "charlotte-nc" },
+        { name: "DURHAM, NC", value: "durham-nc" },
+        { name: "WASHINGTON, DC", value: "washington-dc" },
+        { name: "TAMPA, FL", value: "tampa-fl" }
+      ];
+
     return (
         <div className="app">
             <Navbar />
@@ -24,8 +37,8 @@ const App = () => {
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />
                 <Route path="/our_story" element={<OurStory />} />
-                <Route path="/locations" element={<Locations />} />
-                <Route path="/location/details/:location" element={<LocationDetails />} />
+                <Route path="/locations" element={<Locations locationArr={locationArr}/>} />
+                <Route path="/location/details/:location" element={<LocationDetails locationArr={locationArr}/>} />
             </Routes>
             {/* </Suspense> */}
             <Footer />

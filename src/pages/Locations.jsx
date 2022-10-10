@@ -1,17 +1,18 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "../styles/Locations.css";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
-const Locations = () => {
-    const navigate = useNavigate()
-    const [location,setLocation] = useState("")
+const Locations = ({locationArr}) => {
+  const navigate = useNavigate();
+  const [location, setLocation] = useState("");
 
-    const handleSelect = (e) => {
-        if(e.target.value !== "" && e.target.value !== "Locations"){
-            // console.log(e.target.value)
-            navigate(`/location/details/${e.target.value}`)
-        }
+  const handleSelect = (e) => {
+    if (e.target.value !== "" && e.target.value !== "Locations") {
+      // console.log(e.target.value)
+      setLocation(e.target.value);
+      navigate(`/location/details/${e.target.value}`);
     }
+  }
 
   return (
     <div>
@@ -19,24 +20,26 @@ const Locations = () => {
         <h2>SCOOP SHOPS</h2>
       </div>
       <div className="location_row2">
-        <div className=" location_row2_selectContainer col-12 mx-auto mt-5 mb-4">
+        <div className=" location_row2_selectContainer mx-auto mt-5 mb-4">
           <select className="location_row2_select" onChange={handleSelect}>
             <option>Locations</option>
-            {[...Array(5)].map((elementInArray, index) => (
-              <option key={index} value="atlanta-ga">
-                ATLANTA, GA
+            {locationArr.map((curr, index) => (
+              <option key={index} value={curr.value}>
+                {curr.name}
               </option>
             ))}
           </select>
         </div>
       </div>
       <div className="location_row3">
-        {[...Array(9)].map((elementInArray, index) => (
+        {locationArr.map((curr, index) => (
           <div className="location_row3_box" key={index}>
-            <div onClick={() => navigate('/location/details/atlanta-ga')}>
-              <h4>ATLANTA, GA</h4>
+            <div onClick={() => navigate(`/location/details/${curr.value}`)}>
+              <h4>{curr.name}</h4>
             </div>
-            <span onClick={() => navigate('/location/details/atlanta-ga')}>Details</span>
+            <span onClick={() => navigate(`/location/details/${curr.value}`)}>
+              Details
+            </span>
           </div>
         ))}
       </div>

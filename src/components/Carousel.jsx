@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import "../styles/Carousel.css"
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs"
 import { AiOutlinePlus } from "react-icons/ai"
@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
+import Card from './Card';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -49,25 +50,7 @@ const Carousel = ({ carouselData }) => {
         <div className='container-fluid px-5'>
             <Slider {...settings}>
                 {carouselData.map((val, index) =>
-                    <div className='carousel-item-wrap' key={val.id}>
-                        <div className='item-image'>
-                            <Link to="/">
-                                <motion.img src={val.image} initial={{ opacity: 1 }} whileHover={{ opacity: [0, 1], transition: { duration: 0.3 } }} onHoverStart={e => (e.currentTarget.src = val.hoverImage)} onHoverEnd={e => (e.currentTarget.src = val.image)} alt="Item_image" />
-                            </Link>
-                            <div className='add-icon'>
-                                <AiOutlinePlus />
-                            </div>
-                        </div>
-                        <div className="item-content">
-                            <h3>
-                                <Link to="/">
-                                    {val.title}
-                                </Link>
-                            </h3>
-                            <p>{val.body}</p>
-                            <h6>{"$" + val.price.toFixed(2)}</h6>
-                        </div>
-                    </div>
+                    <Card cardData={val} key={index} />
                 )}
             </Slider>
         </div>

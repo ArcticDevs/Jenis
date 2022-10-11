@@ -130,7 +130,7 @@ const Footer = () => {
 								<ul className='p-0 m-0 d-flex flex-column gap-3'>
 									<li className='fs-6 fw-normal text-capitalize'><Link to="/our_story" className='text-dark'>Our Story</Link></li>
 									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Lorem Britton</Link></li>
-									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Join our Team</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/join" className='text-dark'>Join our Team</Link></li>
 									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Events & catering</Link></li>
 									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Corporate Gifting</Link></li>
 									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Fundraising</Link></li>

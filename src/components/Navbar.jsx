@@ -118,7 +118,7 @@ const Navbar = () => {
                                     </button>
                                 </li>
                                 <li className='d-flex justify-content-between w-100 align-items-center'>
-                                    <Link to="/">Shop</Link>
+                                    <Link to="/shop">Shop</Link>
                                     <button className='btn p-0' onClick={() => handleSubMenu("Shop")}>
                                         <BsChevronRight className='nav-icon p-0' />
                                     </button>
@@ -270,13 +270,13 @@ const Navbar = () => {
                     </div>
                     <ul className={`nav-links-section ${hideLinks && "hide-nav-links"}`}>
                         <li className={showDesktopMenu && showDesktopValue === "Shop" ? "nav-hover" : undefined} onMouseEnter={() => handleDesktopHoverMenu(true, "Shop")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
-                            <Link to="/">Shop</Link>
+                            <Link to="/shop" onClick={() => handleDesktopHoverMenu(false, "")}>Shop</Link>
                         </li>
                         <li className={showDesktopMenu && showDesktopValue === "Gift" ? "nav-hover" : undefined} onMouseEnter={() => handleDesktopHoverMenu(true, "Gift")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
-                            <Link to="/">Gifting</Link>
+                            <Link to="/" onClick={() => handleDesktopHoverMenu(false, "")}>Gifting</Link>
                         </li>
                         <li className={showDesktopMenu && showDesktopValue === "Delivery" ? "nav-hover" : undefined} onMouseEnter={() => handleDesktopHoverMenu(true, "Delivery")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
-                            <Link to="/">Delivery</Link>
+                            <Link to="/" onClick={() => handleDesktopHoverMenu(false, "")}>Delivery</Link>
                         </li>
                         <li><Link to="/locations">Visit Us</Link></li>
                         <li><Link to="/">Grocery</Link></li>

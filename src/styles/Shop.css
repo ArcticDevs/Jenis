@@ -1,0 +1,38 @@
+.shop-card-wrap {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    /* gap: 10px; */
+}
+.shop-card {
+    position: relative;
+    display: block;
+    width: 25%;
+    height: 100%;
+    /* height: 400px; */
+}
+
+.shop-card .card-item-wrap {
+    padding: 10px 10px;
+}
+
+.shop-card .item-image {
+    height: 400px;
+}
+
+@media only screen and (max-width: 1050px) {
+    .shop-card {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .shop-card {
+        width: 50%;
+    }
+    .shop-card .item-image {
+        height: 100%;
+    }
+}

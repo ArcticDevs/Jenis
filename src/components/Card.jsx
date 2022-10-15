@@ -27,9 +27,9 @@ const Card = ({ cardData }) => {
                 <Link to="/">
                     <motion.img src={cardData.image} initial={{ opacity: 1 }} whileHover={{ opacity: [0, 1], transition: { duration: 0.3 } }} onHoverStart={e => (e.currentTarget.src = cardData.hoverImage)} onHoverEnd={e => (e.currentTarget.src = cardData.image)} alt="Item_image" />
                 </Link>
-                <motion.button className='btn add-icon' whileHover={{ transition: { duration: 0.5 } }} onHoverStart={() => setBtnHover(true)} onHoverEnd={() => setBtnHover(false)}>
+                {/* <motion.button className='btn add-icon' whileHover={{ transition: { duration: 0.5 } }} onHoverStart={() => setBtnHover(true)} onHoverEnd={() => setBtnHover(false)}>
                     {btnHover ? "ADD" : <AiOutlinePlus />}
-                </motion.button>
+                </motion.button> */}
             </div>
             <div className="item-content">
                 <h3>

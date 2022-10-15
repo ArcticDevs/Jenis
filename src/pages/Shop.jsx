@@ -136,7 +136,7 @@ const shop_card = [
 	}
 ]
 
-const DropdownCheckbox = ({label,value}) => {
+const DropdownCheckbox = ({ label, value }) => {
 	return (
 		<div className='dropdown-input'>
 			<input className="form-check-input" type="checkbox" value={value} id="flexCheckChecked" />
@@ -155,10 +155,10 @@ const Shop = () => {
 				<p className='pt-3 w-50 m-auto fs-6 fw-normal'>Our order minimum is 4 pints. But after that it's up to you. Our boxes are designed to neatly hold up to 6, 9, or 18 pints.</p>
 			</div>
 			<div className=''>
-				<div>
+				<div className='py-4 px-3'>
 					<div className='d-flex justify-content-between align-items-center'>
 						<div className='filter-wrap d-flex align-items-center'>
-							<h3 className='fs-6 fw-bold'>Filter:</h3>
+							<h3 className='fs-6 fw-bold m-0'>Filter:</h3>
 							<div className="btn-group">
 								<button className="btn filter-drop-btn" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
 									<span className='fs-6 fw-bold'>More Filters</span>
@@ -166,8 +166,8 @@ const Shop = () => {
 								</button>
 								<ul className="dropdown-menu">
 									<li>
-										<div className='d-flex justify-content-between align-items-center'>
-											<h3>Selected</h3>
+										<div className='filter-menu-head d-flex justify-content-between align-items-center'>
+											<h3 className='m-0'>0 selected</h3>
 											<button>Reset</button>
 										</div>
 									</li>
@@ -180,24 +180,26 @@ const Shop = () => {
 								</ul>
 							</div>
 						</div>
-						<div className='d-flex align-items-center gap-2'>
-							<div className='d-flex align-items-center w-100'>
+						<div className='sort-menu d-flex justify-content-between align-items-center gap-5'>
+							<div className='select-btn d-flex align-items-center'>
 								<span className=''>Sort by:</span>
 								<select className="form-select" aria-label="Default select example">
-									<option selected>Open this select menu</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option selected>Featured</option>
+									<option value="1">Best Selling</option>
+									<option value="2">Alphabetically, A-Z</option>
+									<option value="3">Alphabetically, Z-A</option>
+									<option value="4">Price, low to high</option>
+									<option value="5">Price, High to low</option>
+									<option value="6">Date, old to new</option>
+									<option value="7">Date, new to old</option>
 								</select>
 							</div>
-							<div>
-								<h3 className='fs-6 fw-bold'>{shop_card.length + " products"}</h3>
-							</div>
+							<h3>{shop_card.length + " products"}</h3>
 						</div>
 					</div>
 					<div className='chips'></div>
 				</div>
-				<div className='shop-card-wrap py-5'>
+				<div className='shop-card-wrap'>
 					{shop_card.map((val, index) =>
 						<div className='shop-card'>
 							<Card cardData={val} key={index} />

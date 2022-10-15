@@ -23,6 +23,89 @@
     height: 400px;
 }
 
+.filter-drop-btn {
+    position: relative;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border: none !important;
+}
+
+.filter-drop-btn svg {
+    fill: var(--theme-color);
+}
+
+.filter-drop-btn:focus {
+    outline: none;
+    border: none;
+}
+
+.dropdown-menu {
+    border-radius: 0 !important;
+    padding: 20px !important;
+    width: 300px;
+}
+
+.dropdown-menu li {
+    margin: 20px 0;
+}
+
+.filter-menu-head h3 {
+    font-size: 16px;
+}
+
+.filter-menu-head button {
+    font-size: 14px;
+    text-decoration: underline;
+    color: cadetblue;
+}
+
+.filter-wrap {
+    flex: 60%;
+}
+
+.sort-menu {
+    position: relative;
+    flex: 40%;
+}
+
+.sort-menu span {
+    flex: 10%;
+    text-align: right;
+}
+
+.sort-menu select {
+    flex: 60%;
+}
+
+.sort-menu .select-btn {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    flex: 50%;
+    gap: 20px;
+    width: 100%;
+}
+
+.select-btn select {
+    border: none;
+}
+
+.sort-menu h3 {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    flex: 10%;
+    margin: 0;
+}
+
+.dropdown-input {
+    position: relative;
+    display: flex;
+    gap: 15px;
+}
+
 @media only screen and (max-width: 1050px) {
     .shop-card {
         width: 40%;

@@ -129,12 +129,12 @@ const Navbar = () => {
                                         <BsChevronRight className='nav-icon p-0' />
                                     </button>
                                 </li>
-                                <li className='d-flex justify-content-between w-100 align-items-center'>
+                                {/* <li className='d-flex justify-content-between w-100 align-items-center'>
                                     <Link to="/">Delivery</Link>
                                     <button className='btn p-0' onClick={() => handleSubMenu("Delivery")}>
                                         <BsChevronRight className='nav-icon p-0' />
                                     </button>
-                                </li>
+                                </li> */}
                                 <li>
                                     <Link to="/locations">Visit Us</Link>
                                 </li>
@@ -223,8 +223,7 @@ const Navbar = () => {
                             </div>
                             {/* </div> */}
                         </div>
-                        <div className={`mob-sub-menu ${showMobSubMenu && subMenuValue === "Delivery" && "show-mob-sub-menu"}`}>
-                            {/* <div className="mob-sub-menu"> */}
+                        {/* <div className={`mob-sub-menu ${showMobSubMenu && subMenuValue === "Delivery" && "show-mob-sub-menu"}`}>
                             <div className='sub-menu-head'>
                                 <button className='btn p-0' onClick={() => { setShowMobSubMenu(false); setSubMenuValue("") }}>
                                     <BsChevronLeft className='nav-icon p-0' />
@@ -241,7 +240,7 @@ const Navbar = () => {
                                     <span className='text-uppercase fs-6 fw-bold m-0'>Nationwide Shipping</span>
                                 </button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </nav>
                 :
@@ -275,9 +274,9 @@ const Navbar = () => {
                         <li className={showDesktopMenu && showDesktopValue === "Gift" ? "nav-hover" : undefined} onMouseEnter={() => handleDesktopHoverMenu(true, "Gift")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
                             <Link to="/" onClick={() => handleDesktopHoverMenu(false, "")}>Gifting</Link>
                         </li>
-                        <li className={showDesktopMenu && showDesktopValue === "Delivery" ? "nav-hover" : undefined} onMouseEnter={() => handleDesktopHoverMenu(true, "Delivery")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
+                        {/* <li className={showDesktopMenu && showDesktopValue === "Delivery" ? "nav-hover" : undefined} onMouseEnter={() => handleDesktopHoverMenu(true, "Delivery")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
                             <Link to="/" onClick={() => handleDesktopHoverMenu(false, "")}>Delivery</Link>
-                        </li>
+                        </li> */}
                         <li><Link to="/locations">Visit Us</Link></li>
                         <li><Link to="/">Grocery</Link></li>
                         <li><Link to="/our_story">Our Story</Link></li>
@@ -352,7 +351,7 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='desktop-hover-menu-wrap' onMouseEnter={() => handleDesktopHoverMenu(true, "Delivery")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
+                    {/* <div className='desktop-hover-menu-wrap' onMouseEnter={() => handleDesktopHoverMenu(true, "Delivery")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
                         <div className={`desktop-hover-menu ${showDesktopMenu && showDesktopValue === "Delivery" && "show-desktop-menu"}`}>
                             <div className='delivery'>
                                 <div className='delivery-image-wrap mb-2'>
@@ -367,7 +366,7 @@ const Navbar = () => {
                                 <h3>Nationwide Shipping</h3>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </nav>
             }
         </header >

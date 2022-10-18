@@ -8,7 +8,8 @@
 
 .footer-body {
     position: relative;
-    display: block;
+    /* align-items: center; */
+    /* display: block; */
 }
 
 .footer-mob-grid {
@@ -17,13 +18,13 @@
 }
 
 .footer-left {
-    flex: 40%;
-    padding: 70px 30px 10px 10px;
+    flex: 20% !important;
+    padding: 70px 30px 10px 50px !important;
 }
 
 .footer-right {
-    flex: 60%;
-    padding: 70px 10px 30px 30px;
+    flex: 80%;
+    padding: 70px 10px 30px 40px !important;
 }
 
 .footer-form {

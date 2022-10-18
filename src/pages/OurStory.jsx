@@ -1,12 +1,13 @@
 import React from "react";
 import "../styles/OurStory.css";
+import story_1 from '../assets/story_1.jpg'
 
 const OurStory = () => {
   return (
     <div className="ot_container">
       <div className="ot_row1">
         <img
-          src="https://cdn.shopify.com/s/files/1/0592/5476/7822/files/AboutUs_OurStory_Desktop_2000x.jpg?v=1649873313"
+          src={story_1}
           alt=""
           className="img-fluid"
         />

@@ -4,7 +4,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    /* z-index: 10; */
+    z-index: 10;
     width: 100%;
 }
 
@@ -35,6 +35,7 @@ nav {
     transition: all 0.3s ease-in;
     /* transform: translateY(-100px); */
 }
+
 .hide-nav-links {
     /* transition: all 0.3s ease-in; */
     transform: translateY(-1000px);
@@ -46,7 +47,7 @@ nav {
 
 .desktop .nav-logo-section {
     position: relative;
-    background-color: #f9f9f7;
+    background-color: #fff;
     padding: 20px;
     width: 100%;
     display: grid;
@@ -75,6 +76,206 @@ nav {
     object-fit: contain;
 }
 
+.sidebar-btn-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sidebar-btn-bar {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+    background-color: #333;
+    opacity: 1;
+    top: 0;
+    transform: rotate(0);
+}
+
+/* .sidebar-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 7;
+    background-color: #fff;
+} */
+
+.sidebar-wrap {
+    position: relative;
+    width: 300px;
+    margin-left: auto;
+    /* bottom: 0; */
+    display: block;
+    height: 100vh;
+    z-index: 7;
+}
+
+.sidebar {
+    position: absolute;
+    right: -1000px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: all 0.4s ease;
+    padding: 30px 0;
+}
+
+.sidebar-links-section {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0 0px 0 20px;
+}
+
+.sidebar-links-section li a {
+    position: relative;
+    display: block;
+    color: #333;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sidebar-links-section .nav-icon {
+    fill: var(--theme-color);
+}
+
+.sidebar-sub-menu {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: -1000px;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #fff;
+    transition: all 0.4s ease;
+    padding: 20px 10px 20px 20px;
+    z-index: 8;
+}
+
+.show-sidebar--sub-menu {
+    right: 0;
+}
+
+.sidebar-menu-head {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.sidebar-menu-head h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar-sub-menu h3 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.sidebar-sub-menu ul {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 10px;
+}
+
+.sidebar-sub-menu ul a {
+    color: #333;
+}
+
+.sidebar-sub-menu h4 {
+    position: relative;
+    display: block;
+    padding: 20px 10px;
+}
+
+.sidebar-sub-menu h4 a {
+    font-size: 16px;
+    color: #333;
+}
+
+.sidebar-sub-menu-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 200px;
+}
+
+.sidebar-sub-menu-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.sidebar-sub-menu-footer-link {
+    color: #333 !important;
+}
+
+.sidebar-sub-menu-footer {
+    position: relative;
+    display: block !important;
+    width: 100%;
+    height: 75%;
+    padding: 0 15px;
+}
+
+.sidebar-sub-menu-footer p {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.sidebar-sub-menu-footer h5 {
+    display: block;
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.show-sidebar {
+    right: 0;
+}
+
+.sidebar--active .sidebar-btn-bar:nth-child(1) {
+    /* transform-origin: top left; */
+    top: 8px;
+    transform: rotate(45deg);
+}
+
+.sidebar--active .sidebar-btn-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.sidebar--active .sidebar-btn-bar:nth-child(3) {
+    top: -8px;
+    transform: rotate(135deg);
+}
+
 .desktop .logo-section-btns {
     grid-area: 1 / 3 / 1 /-1;
     position: relative;
@@ -83,37 +284,6 @@ nav {
     align-items: center;
     gap: 2vw;
     width: 100%;
-}
-
-.logo-section-btns h3 {
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    margin: 0;
-}
-
-.logo-section-btns button {
-    padding: 0;
-}
-
-.search-section {
-    position: relative;
-    display: flex;
-}
-
-.search {
-    position: relative;
-    display: block;
-    padding: 4px 5px 0;
-    border: none;
-    width: 100%;
-    background-color: transparent !important;
-    border-radius: none !important;
-    border-bottom: 3px solid black;
-}
-
-.search:focus {
-    outline: none !important;
 }
 
 .hide {
@@ -143,7 +313,7 @@ nav {
     padding: 0;
     z-index: 8;
     margin: 0;
-    background-color: #fff;
+    background-color: #f9f9f7;
 }
 
 .desktop .nav-links-section li a {
@@ -179,11 +349,40 @@ nav {
     padding: 30px 50px 30px 5vw;
 }
 
+.location-hover-wrap.desktop-hover-menu-wrap {
+    width: fit-content;
+}
+
+.location-hover.desktop-hover-menu {
+    width: fit-content;
+    height: fit-content;
+    left: -160px;
+    right: unset;
+    padding: 10px 30px !important;
+}
+
+.location-hover.desktop-hover-menu a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
 .nav-hover {
     position: relative;
     display: block;
 }
+
 .nav-hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--theme-color);
+    transition: width 0.3s ease;
+}
+
+.nav-hover:hover::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -244,12 +443,14 @@ nav {
     /* flex: 1; */
     height: 100%;
 }
-.menu-grid-image-wrap .grid-image{
+
+.menu-grid-image-wrap .grid-image {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
 }
+
 .grid-image img {
     position: relative;
     display: block;
@@ -264,7 +465,7 @@ nav {
     bottom: 20px;
     left: 10px;
     width: 180px;
-    background-color: rgba(250,247,245,1);
+    background-color: rgba(250, 247, 245, 1);
 }
 
 .image-content h6 {
@@ -293,7 +494,7 @@ nav {
     width: 1px;
     background-color: gainsboro;
     height: 100%;
-    z-index: 7;    
+    z-index: 7;
 }
 
 
@@ -302,6 +503,10 @@ nav {
 .mobile {
     height: 100%;
     justify-content: unset;
+}
+
+.mobile .nav-logo {
+    margin: auto;
 }
 
 .mobile .nav-logo-section {

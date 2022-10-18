@@ -4,27 +4,115 @@ import "../styles/Navbar.css";
 import Logo from '../assets/logo.png'
 import useBreakpoints from '../customHooks/useBreakpoints'
 // import { motion } from "framer-motion";
-import { MdSearch } from "react-icons/md"
-import { FaUser } from "react-icons/fa"
-import { IoMdCart, IoMdClose } from "react-icons/io"
-import { IoBagHandleSharp } from "react-icons/io5"
+// import { MdSearch } from "react-icons/md"
+// import { FaUser } from "react-icons/fa"
+// import { IoMdCart, IoMdClose } from "react-icons/io"
+// import { IoBagHandleSharp } from "react-icons/io5"
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs"
 import sub_menu_image from "../assets/Navbar/sub_menu.jpg"
-import { GiCardboardBoxClosed } from "react-icons/gi"
-import delivery_image_1 from '../assets/Navbar/delivery_menu_1.png'
-import delivery_image_2 from '../assets/Navbar/delivery_menu_2.png'
+// import { GiCardboardBoxClosed } from "react-icons/gi"
+// import delivery_image_1 from '../assets/Navbar/delivery_menu_1.png'
+// import delivery_image_2 from '../assets/Navbar/delivery_menu_2.png'
+
+const DesktopSideBar = ({ showSidebar }) => {
+    const [showSidebarSubMenu, setShowSidebarSubMenu] = useState(false)
+    const [subSidebarValue, setSubSidebarValue] = useState("")
+
+    const handleSidebarMenu = (data) => {
+        setShowSidebarSubMenu(true)
+        setSubSidebarValue(data)
+    }
+
+    useEffect(() => {
+        if (!showSidebar) {
+            setShowSidebarSubMenu(false);
+            setSubSidebarValue("")
+        }
+    }, [showSidebar])
+
+    return (
+        <>
+            <div className={`sidebar ${showSidebar && "show-sidebar"}`}>
+                <ul className='sidebar-links-section'>
+                    <li className='d-flex justify-content-between w-100 align-items-center'>
+                        <Link to="/locations">Location</Link>
+                        <button className='btn p-0' onClick={() => handleSidebarMenu("location")}>
+                            <BsChevronRight className='nav-icon p-0' />
+                        </button>
+                    </li>
+                    <li><Link to="/contact-us">Contact Us</Link></li>
+                    <li>
+                        <Link to="/our_story">Our Story</Link>
+                    </li>
+                    <li className='d-flex justify-content-between w-100 align-items-center'>
+                        <Link to="/shop">Menu</Link>
+                        <button className='btn p-0' onClick={() => handleSidebarMenu("Shop")}>
+                            <BsChevronRight className='nav-icon p-0' />
+                        </button>
+                    </li>
+                    <li><Link to="/">Gallery</Link></li>
+                </ul>
+                <div className={`sidebar-sub-menu ${showSidebarSubMenu && subSidebarValue === "Shop" && "show-sidebar--sub-menu"}`}>
+                    <div className='sidebar-menu-head'>
+                        <button className='btn p-0' onClick={() => { setShowSidebarSubMenu(false); setSubSidebarValue("") }}>
+                            <BsChevronLeft className='nav-icon p-0' />
+                        </button>
+                        <h3>Menu</h3>
+                    </div>
+                    <h3>Flavors</h3>
+                    <ul>
+                        <li><Link to="/">All Flavors</Link></li>
+                        <li><Link to="/">New Arrivals</Link></li>
+                        <li><Link to="/">Dairy Free</Link></li>
+                        <li><Link to="/">Gluten Free</Link></li>
+                    </ul>
+                    <h3>Collections</h3>
+                    <ul>
+                        <li><Link to="/">All Collections</Link></li>
+                        <li><Link to="/">Best Sellers</Link></li>
+                        <li><Link to="/">Fall Favorites</Link></li>
+                        <li><Link to="/">Single Servings</Link></li>
+                    </ul>
+                    <div className='sidebar-sub-menu-footer'>
+                        <Link to="/" className='sidebar-sub-menu-footer-link'>
+                            <div className='sidebar-sub-menu-image'>
+                                <img src={sub_menu_image} alt="sub_menu_image" />
+                            </div>
+                            <p>Tap to Fall!</p>
+                            <h5>Comforting ice creams made for cooler days.</h5>
+                        </Link>
+                    </div>
+                </div>
+                <div className={`sidebar-sub-menu ${showSidebarSubMenu && subSidebarValue === "location" && "show-sidebar-sub-menu"}`}>
+                    <div className='sidebar-sub-menu-head'>
+                        <button className='btn p-0' onClick={() => { setShowSidebarSubMenu(false); setSubSidebarValue("") }}>
+                            <BsChevronLeft className='nav-icon p-0' />
+                        </button>
+                        <h3>Location</h3>
+                    </div>
+                    <ul>
+                        <li><Link to="/location">Franchising</Link></li>
+                    </ul>
+                </div>
+            </div>
+        </>
+    )
+}
 
 const Navbar = () => {
 
     const { isMd } = useBreakpoints();
 
-    const [showSearch, setShowSearch] = useState(false)
-    const [showSearchClose, setShowSearchClose] = useState(false)
-    const [searchValue, setSearchValue] = useState("")
+    // const [showSearch, setShowSearch] = useState(false)
+    // const [showSearchClose, setShowSearchClose] = useState(false)
+    // const [searchValue, setSearchValue] = useState("")
 
     const [showMobMenu, setShowMobMenu] = useState(false)
     const [showMobSubMenu, setShowMobSubMenu] = useState(false)
     const [subMenuValue, setSubMenuValue] = useState("")
+
+    const [showSidebar, setShowSidebar] = useState(false)
+    const [showSidebarBtn, setShowSidebarBtn] = useState(false)
 
     const [showDesktopMenu, setShowDesktopMenu] = useState(false);
     const [showDesktopValue, setShowDesktopValue] = useState("");
@@ -32,14 +120,14 @@ const Navbar = () => {
     const [hideLinks, setHideLinks] = useState(false);
     const [hideReward, setHideReward] = useState(false);
 
-    const handleMobSearch = (e) => {
-        setSearchValue(e.target.value)
-        if (e.target.value === "")
-            setShowSearchClose(false);
-        else {
-            setShowSearchClose(true)
-        }
-    }
+    // const handleMobSearch = (e) => {
+    //     setSearchValue(e.target.value)
+    //     if (e.target.value === "")
+    //         setShowSearchClose(false);
+    //     else {
+    //         setShowSearchClose(true)
+    //     }
+    // }
 
     const handleSubMenu = (data) => {
         setShowMobSubMenu(true)
@@ -52,15 +140,24 @@ const Navbar = () => {
     }
 
     useEffect(() => {
+        if (showMobMenu)
+            document.body.style.overflow = "hidden";
+        else
+            document.body.style.overflowY = "scroll";
+    }, [showMobMenu])
+
+    useEffect(() => {
         if (!isMd) {
             window.onscroll = function () {
                 if (window.pageYOffset === 0 || window.scrollY === 0) {
                     setHideLinks(false)
                     setHideReward(false)
+                    setShowSidebarBtn(false)
                     document.getElementById("header").style.zIndex = 5;
                 }
                 if (window.scrollY > 5) {
                     setHideLinks(true)
+                    setShowSidebarBtn(true)
                 }
                 if (window.scrollY > 7) {
                     document.getElementById("header").style.zIndex = 10;
@@ -85,13 +182,13 @@ const Navbar = () => {
                 return () => (window.onscroll = null);
             };
         }
-    },[isMd])
+    }, [isMd])
 
     return (
         <header id='header'>
             {isMd ?
                 <nav className='mobile'>
-                    <div className={`nav-reward ${hideReward && "hide-nav-reward"}`}>Get the perks: Join Splendid Rewards</div>
+                    <div className={`nav-reward text-uppercase ${hideReward && "hide-nav-reward"}`}>All new flavors available</div>
                     <div className='nav-logo-section'>
                         <div className={`menu-btn-wrapper ${showMobMenu && "active"}`} onClick={() => { setShowMobSubMenu(false); setShowMobMenu(!showMobMenu); setSubMenuValue("") }}>
                             <div className="menu-btn-bar"></div>
@@ -101,67 +198,35 @@ const Navbar = () => {
                         <div className="nav-logo">
                             <img src={Logo} alt="Logo" />
                         </div>
-                        <div>
-                            <IoMdCart className='nav-icon' />
-                        </div>
                     </div>
                     <div className='mob-menu-container'>
                         <div className={`mob-menu ${showMobMenu && "show-mob-menu"}`}>
                             <ul className='nav-links-section'>
-                                <li className='d-flex mob-search mb-2'>
-                                    <button className='search-btn'>
-                                        <MdSearch className='nav-icon' />
-                                    </button>
-                                    <input type="text" className="search" placeholder='Search' aria-label="Search" value={searchValue} onChange={handleMobSearch} />
-                                    <button type='button' className={showSearchClose ? "show-btn" : "hide-btn"} onClick={() => setSearchValue("")}>
-                                        <IoMdClose className='nav-icon' />
+                                <li className='d-flex justify-content-between w-100 align-items-center'>
+                                    <Link to="/locations">Location</Link>
+                                    <button className='btn p-0' onClick={() => handleSubMenu("location")}>
+                                        <BsChevronRight className='nav-icon p-0' />
                                     </button>
                                 </li>
+                                <li><Link to="/contact-us">Contact Us</Link></li>
+                                <li>
+                                    <Link to="/our_story">Our Story</Link>
+                                </li>
                                 <li className='d-flex justify-content-between w-100 align-items-center'>
-                                    <Link to="/shop">Shop</Link>
+                                    <Link to="/shop">Menu</Link>
                                     <button className='btn p-0' onClick={() => handleSubMenu("Shop")}>
                                         <BsChevronRight className='nav-icon p-0' />
                                     </button>
                                 </li>
-                                <li className='d-flex justify-content-between w-100 align-items-center'>
-                                    <Link to="/">Gifting</Link>
-                                    <button className='btn p-0' onClick={() => handleSubMenu("Gift")}>
-                                        <BsChevronRight className='nav-icon p-0' />
-                                    </button>
-                                </li>
-                                {/* <li className='d-flex justify-content-between w-100 align-items-center'>
-                                    <Link to="/">Delivery</Link>
-                                    <button className='btn p-0' onClick={() => handleSubMenu("Delivery")}>
-                                        <BsChevronRight className='nav-icon p-0' />
-                                    </button>
-                                </li> */}
-                                <li>
-                                    <Link to="/locations">Visit Us</Link>
-                                </li>
-                                <li>
-                                    <Link to="/">Grocery</Link>
-                                </li>
-                                <li>
-                                    <Link to="/our_story">Our Story</Link>
-                                </li>
+                                <li><Link to="/">Gallery</Link></li>
                             </ul>
-                            <div className='mob-footer'>
-                                <h4>
-                                    <Link to="/">Rewards</Link>
-                                </h4>
-                                <div>
-                                    <FaUser className='nav-icon' />
-                                    <span>Log In</span>
-                                </div>
-                            </div>
                         </div>
                         <div className={`mob-sub-menu ${showMobSubMenu && subMenuValue === "Shop" && "show-mob-sub-menu"}`}>
-                            {/* <div className="mob-sub-menu"> */}
                             <div className='sub-menu-head'>
                                 <button className='btn p-0' onClick={() => { setShowMobSubMenu(false); setSubMenuValue("") }}>
                                     <BsChevronLeft className='nav-icon p-0' />
                                 </button>
-                                <h3>Shop</h3>
+                                <h3>Menu</h3>
                             </div>
                             <h3>Flavors</h3>
                             <ul>
@@ -177,8 +242,6 @@ const Navbar = () => {
                                 <li><Link to="/">Fall Favorites</Link></li>
                                 <li><Link to="/">Single Servings</Link></li>
                             </ul>
-                            <h3>Merch</h3>
-                            <h4><Link to="/">View All Merch</Link></h4>
                             <div className='sub-menu-footer'>
                                 <Link to="/" className='sub-menu-footer-link'>
                                     <div className='sub-menu-image'>
@@ -188,98 +251,49 @@ const Navbar = () => {
                                     <h5>Comforting ice creams made for cooler days.</h5>
                                 </Link>
                             </div>
-                            {/* </div> */}
                         </div>
-                        <div className={`mob-sub-menu ${showMobSubMenu && subMenuValue === "Gift" && "show-mob-sub-menu"}`}>
-                            {/* <div className="mob-sub-menu"> */}
+                        <div className={`mob-sub-menu ${showMobSubMenu && subMenuValue === "location" && "show-mob-sub-menu"}`}>
                             <div className='sub-menu-head'>
                                 <button className='btn p-0' onClick={() => { setShowMobSubMenu(false); setSubMenuValue("") }}>
                                     <BsChevronLeft className='nav-icon p-0' />
                                 </button>
-                                <h3>Gifting</h3>
+                                <h3>Location</h3>
                             </div>
-                            <h3>Occasions</h3>
                             <ul>
-                                <li><Link to="/">BirthDay</Link></li>
-                                <li><Link to="/">Thank You</Link></li>
-                                <li><Link to="/">Congratulations</Link></li>
-                                <li><Link to="/">Party</Link></li>
+                                <li><Link to="/location">Franchising</Link></li>
                             </ul>
-                            <h3>Gifts</h3>
-                            <ul>
-                                <li><Link to="/">Pick Your Own Mix</Link></li>
-                                <li><Link to="/">Pint Club</Link></li>
-                                <li><Link to="/">Corporate Gifts</Link></li>
-                                <li><Link to="/">Gift Cards</Link></li>
-                            </ul>
-                            <div className='sub-menu-footer'>
-                                <Link to="/" className='sub-menu-footer-link'>
-                                    <div className='sub-menu-image'>
-                                        <img src={sub_menu_image} alt="sub_menu_image" />
-                                    </div>
-                                    <p>Tap to Fall!</p>
-                                    <h5>Comforting ice creams made for cooler days.</h5>
-                                </Link>
-                            </div>
-                            {/* </div> */}
                         </div>
-                        {/* <div className={`mob-sub-menu ${showMobSubMenu && subMenuValue === "Delivery" && "show-mob-sub-menu"}`}>
-                            <div className='sub-menu-head'>
-                                <button className='btn p-0' onClick={() => { setShowMobSubMenu(false); setSubMenuValue("") }}>
-                                    <BsChevronLeft className='nav-icon p-0' />
-                                </button>
-                                <h3>Delivery</h3>
-                            </div>
-                            <div className='delivery-btn'>
-                                <button className='rounded-0'>
-                                    <IoBagHandleSharp className='nav-icon p-0' />
-                                    <span className='text-uppercase fs-6 fw-bold m-0'>Local Delivery</span>
-                                </button>
-                                <button className='rounded-0'>
-                                    <GiCardboardBoxClosed className='nav-icon p-0' />
-                                    <span className='text-uppercase fs-6 fw-bold m-0'>Nationwide Shipping</span>
-                                </button>
-                            </div>
-                        </div> */}
                     </div>
                 </nav>
                 :
                 <nav className='desktop'>
-                    <div className={`nav-reward ${hideReward && "hide-nav-reward"}`}>Get the perks: Join Lorem's Splendid Rewards</div>
+                    <div className={`nav-reward text-uppercase ${hideReward && "hide-nav-reward"}`}>All new flavors available!</div>
                     <div className='nav-logo-section px-5 fixed-top'>
                         <div className="nav-logo">
-                            <img src={Logo} alt="Logo" />
+                            <Link to="/">
+                                <img src={Logo} alt="Logo" />
+                            </Link>
                         </div>
                         <div className='logo-section-btns'>
-                            <div className='d-flex'>
-                                <button className='search-btn' onClick={() => setShowSearch(true)}>
-                                    <MdSearch className='nav-icon' />
-                                </button>
-                                <div className={`search-section ${!showSearch && "hide"}`}>
-                                    <input type="text" className="search" placeholder='Search' aria-label="Search" />
-                                    <button type='button' onClick={() => setShowSearch(false)}>
-                                        <IoMdClose className='nav-icon' />
-                                    </button>
+                            {showSidebarBtn &&
+                                <div className={`sidebar-btn-wrapper ${showSidebar && "sidebar--active"}`} onClick={() => { setShowSidebar(!showSidebar); }}>
+                                    <div className="sidebar-btn-bar"></div>
+                                    <div className="sidebar-btn-bar"></div>
+                                    <div className="sidebar-btn-bar"></div>
                                 </div>
-                            </div>
-                            <h3>Rewards</h3>
-                            <FaUser className='nav-icon user' />
-                            <IoMdCart className='nav-icon cart' />
+                            }
                         </div>
                     </div>
                     <ul className={`nav-links-section ${hideLinks && "hide-nav-links"}`}>
-                        <li className={showDesktopMenu && showDesktopValue === "Shop" ? "nav-hover" : undefined} onMouseEnter={() => handleDesktopHoverMenu(true, "Shop")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
-                            <Link to="/shop" onClick={() => handleDesktopHoverMenu(false, "")}>Shop</Link>
+                        <li className="nav-hover"><Link to="/our_story">Our Story</Link></li>
+                        <li className="nav-hover" onMouseEnter={() => handleDesktopHoverMenu(true, "location")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
+                            <Link to="/locations" onClick={() => handleDesktopHoverMenu(false, "")}>Location</Link>
                         </li>
-                        <li className={showDesktopMenu && showDesktopValue === "Gift" ? "nav-hover" : undefined} onMouseEnter={() => handleDesktopHoverMenu(true, "Gift")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
-                            <Link to="/" onClick={() => handleDesktopHoverMenu(false, "")}>Gifting</Link>
+                        <li className="nav-hover"><Link to="/contact-us">Contact Us</Link></li>
+                        <li className="nav-hover" onMouseEnter={() => handleDesktopHoverMenu(true, "Shop")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
+                            <Link to="/shop" onClick={() => handleDesktopHoverMenu(false, "")}>Menu</Link>
                         </li>
-                        {/* <li className={showDesktopMenu && showDesktopValue === "Delivery" ? "nav-hover" : undefined} onMouseEnter={() => handleDesktopHoverMenu(true, "Delivery")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
-                            <Link to="/" onClick={() => handleDesktopHoverMenu(false, "")}>Delivery</Link>
-                        </li> */}
-                        <li><Link to="/locations">Visit Us</Link></li>
-                        <li><Link to="/">Grocery</Link></li>
-                        <li><Link to="/our_story">Our Story</Link></li>
+                        <li className="nav-hover"><Link to="/">Gallery</Link></li>
                     </ul>
                     <div className='desktop-hover-menu-wrap' onMouseEnter={() => handleDesktopHoverMenu(true, "Shop")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
                         <div className={`desktop-hover-menu ${showDesktopMenu && showDesktopValue === "Shop" && "show-desktop-menu"}`}>
@@ -302,10 +316,6 @@ const Navbar = () => {
                                         <li><Link to="/">Single Servings</Link></li>
                                     </ul>
                                 </div>
-                                <div>
-                                    <h3>Merch</h3>
-                                    <h4><Link to="/">View All Merch</Link></h4>
-                                </div>
                             </div>
                             <div className='menu-grid-image-wrap'>
                                 <div className='grid-image'>
@@ -318,55 +328,14 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='desktop-hover-menu-wrap' onMouseEnter={() => handleDesktopHoverMenu(true, "Gift")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
-                        <div className={`desktop-hover-menu ${showDesktopMenu && showDesktopValue === "Gift" && "show-desktop-menu"}`}>
-                            <div className='menu-grid-column'>
-                                <div>
-                                    <h3>Occasions</h3>
-                                    <ul>
-                                        <li><Link to="/">BirthDay</Link></li>
-                                        <li><Link to="/">Thank You</Link></li>
-                                        <li><Link to="/">Congratulations</Link></li>
-                                        <li><Link to="/">Party</Link></li>
-                                    </ul>
-                                </div>
-                                <div className='gift-menu'>
-                                    <h3>Gifts</h3>
-                                    <ul>
-                                        <li><Link to="/">Pick Your Own Mix</Link></li>
-                                        <li><Link to="/">Pint Club</Link></li>
-                                        <li><Link to="/">Corporate Gifts</Link></li>
-                                        <li><Link to="/">Gift Cards</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className='menu-grid-image-wrap'>
-                                <div className='grid-image'>
-                                    <img src={sub_menu_image} alt="menu_image" />
-                                </div>
-                                <div className="image-content">
-                                    <h6>Tap to Fall!</h6>
-                                    <p>Comforting ice creams made for cooler days.</p>
-                                </div>
-                            </div>
+                    <div className='desktop-hover-menu-wrap location-hover-wrap' onMouseEnter={() => handleDesktopHoverMenu(true, "location")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
+                        <div className={`desktop-hover-menu location-hover ${showDesktopMenu && showDesktopValue === "location" && "show-desktop-menu"}`}>
+                            <Link to="/location">Franchising</Link>
                         </div>
                     </div>
-                    {/* <div className='desktop-hover-menu-wrap' onMouseEnter={() => handleDesktopHoverMenu(true, "Delivery")} onMouseLeave={() => handleDesktopHoverMenu(false, "")}>
-                        <div className={`desktop-hover-menu ${showDesktopMenu && showDesktopValue === "Delivery" && "show-desktop-menu"}`}>
-                            <div className='delivery'>
-                                <div className='delivery-image-wrap mb-2'>
-                                    <img src={delivery_image_1} alt="delivery_image" />
-                                </div>
-                                <h3>Local Delivery</h3>
-                            </div>
-                            <div className='delivery'>
-                                <div className='delivery-image-wrap mb-2'>
-                                    <img src={delivery_image_2} alt="delivery_image" />
-                                </div>
-                                <h3>Nationwide Shipping</h3>
-                            </div>
-                        </div>
-                    </div> */}
+                    <div className="sidebar-wrap">
+                        <DesktopSideBar showSidebar={showSidebar} />
+                    </div>
                 </nav>
             }
         </header >

@@ -580,14 +580,27 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .home-section-1 {
+        height: 100%;
+    }
     .home-section-1-content {
+        position: relative !important;
+        display: block;
         right: unset;
         left: 0;
         right: 0;
         margin: auto;
-        bottom: 100px;
+        bottom: unset;
         width: 90%;
         padding: 30px;
+    }
+
+    .home-section-1-content h2 {
+        font-size: 28px;
+    }
+
+    .home-sec1-image {
+        height: 50%;
     }
 
     .home-section-2 {

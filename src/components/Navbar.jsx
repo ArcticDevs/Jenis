@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import "../styles/Navbar.css";
 import Logo from '../assets/logo.png'
 import useBreakpoints from '../customHooks/useBreakpoints'
+import useOnClickOutside from 'use-onclickoutside';
 // import { motion } from "framer-motion";
 // import { MdSearch } from "react-icons/md"
 // import { FaUser } from "react-icons/fa"
@@ -14,7 +15,7 @@ import sub_menu_image from "../assets/Navbar/sub_menu.jpg"
 // import delivery_image_1 from '../assets/Navbar/delivery_menu_1.png'
 // import delivery_image_2 from '../assets/Navbar/delivery_menu_2.png'
 
-const DesktopSideBar = ({ showSidebar }) => {
+const DesktopSideBar = ({ showSidebar, onClose }) => {
     const [showSidebarSubMenu, setShowSidebarSubMenu] = useState(false)
     const [subSidebarValue, setSubSidebarValue] = useState("")
 
@@ -22,6 +23,10 @@ const DesktopSideBar = ({ showSidebar }) => {
         setShowSidebarSubMenu(true)
         setSubSidebarValue(data)
     }
+
+    const ref = useRef(null)
+
+    useOnClickOutside(ref, () => onClose())
 
     useEffect(() => {
         if (!showSidebar) {
@@ -32,69 +37,71 @@ const DesktopSideBar = ({ showSidebar }) => {
 
     return (
         <>
-            <div className={`sidebar ${showSidebar && "show-sidebar"}`}>
-                <ul className='sidebar-links-section'>
-                    <li className='d-flex justify-content-between w-100 align-items-center'>
-                        <Link to="/locations">Location</Link>
-                        <button className='btn p-0' onClick={() => handleSidebarMenu("location")}>
-                            <BsChevronRight className='nav-icon p-0' />
-                        </button>
-                    </li>
-                    <li><Link to="/contact-us">Contact Us</Link></li>
-                    <li>
-                        <Link to="/our_story">Our Story</Link>
-                    </li>
-                    <li className='d-flex justify-content-between w-100 align-items-center'>
-                        <Link to="/shop">Menu</Link>
-                        <button className='btn p-0' onClick={() => handleSidebarMenu("Shop")}>
-                            <BsChevronRight className='nav-icon p-0' />
-                        </button>
-                    </li>
-                    <li><Link to="/">Gallery</Link></li>
-                </ul>
-                <div className={`sidebar-sub-menu ${showSidebarSubMenu && subSidebarValue === "Shop" && "show-sidebar--sub-menu"}`}>
-                    <div className='sidebar-menu-head'>
-                        <button className='btn p-0' onClick={() => { setShowSidebarSubMenu(false); setSubSidebarValue("") }}>
-                            <BsChevronLeft className='nav-icon p-0' />
-                        </button>
-                        <h3>Menu</h3>
+            <div ref={ref} className={`sidebar ${showSidebar && "show-sidebar"}`}>
+                {/* <div ref={ref} className='sidebar-content'> */}
+                    <ul className='sidebar-links-section'>
+                        <li className='d-flex justify-content-between w-100 align-items-center'>
+                            <Link to="/locations">Location</Link>
+                            <button className='btn p-0' onClick={() => handleSidebarMenu("location")}>
+                                <BsChevronRight className='nav-icon p-0' />
+                            </button>
+                        </li>
+                        <li><Link to="/contact-us">Contact Us</Link></li>
+                        <li>
+                            <Link to="/our_story">Our Story</Link>
+                        </li>
+                        <li className='d-flex justify-content-between w-100 align-items-center'>
+                            <Link to="/shop">Menu</Link>
+                            <button className='btn p-0' onClick={() => handleSidebarMenu("menu")}>
+                                <BsChevronRight className='nav-icon p-0' />
+                            </button>
+                        </li>
+                        <li><Link to="/">Gallery</Link></li>
+                    </ul>
+                    <div className={`sidebar-sub-menu ${showSidebarSubMenu && subSidebarValue === "menu" && "show-sidebar--sub-menu"}`}>
+                        <div className='sidebar-menu-head'>
+                            <button className='btn p-0' onClick={() => { setShowSidebarSubMenu(false); setSubSidebarValue("") }}>
+                                <BsChevronLeft className='nav-icon p-0' />
+                            </button>
+                            <h3>Menu</h3>
+                        </div>
+                        <h3>Flavors</h3>
+                        <ul>
+                            <li><Link to="/">All Flavors</Link></li>
+                            <li><Link to="/">New Arrivals</Link></li>
+                            <li><Link to="/">Dairy Free</Link></li>
+                            <li><Link to="/">Gluten Free</Link></li>
+                        </ul>
+                        <h3>Collections</h3>
+                        <ul>
+                            <li><Link to="/">All Collections</Link></li>
+                            <li><Link to="/">Best Sellers</Link></li>
+                            <li><Link to="/">Fall Favorites</Link></li>
+                            <li><Link to="/">Single Servings</Link></li>
+                        </ul>
+                        <div className='sidebar-sub-menu-footer'>
+                            <Link to="/" className='sidebar-sub-menu-footer-link'>
+                                <div className='sidebar-sub-menu-image'>
+                                    <img src={sub_menu_image} alt="sub_menu_image" />
+                                </div>
+                                <p>Tap to Fall!</p>
+                                <h5>Comforting ice creams made for cooler days.</h5>
+                            </Link>
+                        </div>
                     </div>
-                    <h3>Flavors</h3>
-                    <ul>
-                        <li><Link to="/">All Flavors</Link></li>
-                        <li><Link to="/">New Arrivals</Link></li>
-                        <li><Link to="/">Dairy Free</Link></li>
-                        <li><Link to="/">Gluten Free</Link></li>
-                    </ul>
-                    <h3>Collections</h3>
-                    <ul>
-                        <li><Link to="/">All Collections</Link></li>
-                        <li><Link to="/">Best Sellers</Link></li>
-                        <li><Link to="/">Fall Favorites</Link></li>
-                        <li><Link to="/">Single Servings</Link></li>
-                    </ul>
-                    <div className='sidebar-sub-menu-footer'>
-                        <Link to="/" className='sidebar-sub-menu-footer-link'>
-                            <div className='sidebar-sub-menu-image'>
-                                <img src={sub_menu_image} alt="sub_menu_image" />
-                            </div>
-                            <p>Tap to Fall!</p>
-                            <h5>Comforting ice creams made for cooler days.</h5>
-                        </Link>
+                    <div className={`sidebar-sub-menu ${showSidebarSubMenu && subSidebarValue === "location" && "show-sidebar--sub-menu"}`}>
+                        <div className='sidebar-menu-head'>
+                            <button className='btn p-0' onClick={() => { setShowSidebarSubMenu(false); setSubSidebarValue("") }}>
+                                <BsChevronLeft className='nav-icon p-0' />
+                            </button>
+                            <h3>Location</h3>
+                        </div>
+                        <ul>
+                            <li><Link to="/location">Franchising</Link></li>
+                        </ul>
                     </div>
                 </div>
-                <div className={`sidebar-sub-menu ${showSidebarSubMenu && subSidebarValue === "location" && "show-sidebar-sub-menu"}`}>
-                    <div className='sidebar-sub-menu-head'>
-                        <button className='btn p-0' onClick={() => { setShowSidebarSubMenu(false); setSubSidebarValue("") }}>
-                            <BsChevronLeft className='nav-icon p-0' />
-                        </button>
-                        <h3>Location</h3>
-                    </div>
-                    <ul>
-                        <li><Link to="/location">Franchising</Link></li>
-                    </ul>
-                </div>
-            </div>
+            {/* </div> */}
         </>
     )
 }
@@ -333,8 +340,8 @@ const Navbar = () => {
                             <Link to="/location">Franchising</Link>
                         </div>
                     </div>
-                    <div className="sidebar-wrap">
-                        <DesktopSideBar showSidebar={showSidebar} />
+                    <div className={`sidebar-wrap ${showSidebar && "sidebar-wrap--show"}`}>
+                        <DesktopSideBar showSidebar={showSidebar} onClose={() => setShowSidebar(false)} />
                     </div>
                 </nav>
             }

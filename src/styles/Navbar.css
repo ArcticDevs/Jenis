@@ -111,9 +111,13 @@ nav {
     width: 300px;
     margin-left: auto;
     /* bottom: 0; */
-    display: block;
+    display: none;
     height: 100vh;
-    z-index: 7;
+    /* z-index: -1; */
+}
+
+.sidebar-wrap--show {
+    display: block;
 }
 
 .sidebar {
@@ -125,6 +129,12 @@ nav {
     background-color: #fff;
     transition: all 0.4s ease;
     padding: 30px 0;
+}
+
+.sidebar-content {
+    position: relative;
+    display: block;
+    z-index: 1;
 }
 
 .sidebar-links-section {

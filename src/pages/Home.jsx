@@ -27,7 +27,7 @@ import home_sec4 from "../assets/home/home_sec4.jpg"
 import home_sec5_1 from "../assets/home/home_sec5_1.png"
 import home_sec5_2 from "../assets/home/home_sec5_2.png"
 import home_sec5_3 from "../assets/home/home_sec5_3.png"
-import home_delivery from "../assets/home/home_delivery.gif"
+// import home_delivery from "../assets/home/home_delivery.gif"
 import home_del_1 from "../assets/home/home_del_1.png"
 import home_del_2 from "../assets/home/home_del_2.png"
 import home_del_3 from "../assets/home/home_del_3.png"
@@ -41,6 +41,7 @@ import home_sec9_1 from "../assets/home/home_sec9_1.png"
 import home_sec9_2 from "../assets/home/home_sec9_2.jpg"
 import home_sec9_3 from "../assets/home/home_sec9_3.jpg"
 import home_sec9_4 from "../assets/home/home_sec9_4.jpg"
+import story_1 from '../assets/story_1.jpg'
 import useBreakpoints from '../customHooks/useBreakpoints'
 
 const carouselSection3 = [
@@ -287,7 +288,7 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="home-sec6-image">
-					<img src={home_delivery} alt="Delivery" />
+					<img src={story_1} alt="Delivery" />
 				</div>
 			</div>
 			<div className="home-section-7">

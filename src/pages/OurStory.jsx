@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/OurStory.css";
 import story_1 from '../assets/story_1.jpg'
+import story_2 from '../assets/home/home_sec8.jpg'
 
 const OurStory = () => {
   return (
@@ -48,17 +49,17 @@ const OurStory = () => {
       <div className="ot_row3">
         <div className="ot_row3_image">
           <img
-            src="https://cdn.shopify.com/s/files/1/0592/5476/7822/files/AboutUs_Jeni_1500x.jpg?v=1649873287"
+            src={story_2}
             alt=""
             className="img-fluid"
           />
         </div>
         <div className="ot_row3_content">
-          <h2>Meet Jeni</h2>
+          <h2>Dos Bros</h2>
           <p>
             Our founder literally wrote the book on ice cream—and she has the
             James Beard Award to prove it. With her ahead-of-the-trend vision,
-            Jeni revolutionized the ice cream industry, forever changing the way
+            Bros revolutionized the ice cream industry, forever changing the way
             ice cream is made.
           </p>
           <button>THE JENI'S STORY</button>

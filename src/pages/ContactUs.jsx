@@ -278,7 +278,6 @@ const ContactUs = () => {
 
   return (
     <>
-      <br />
       <div
         className="location_row1 py-5 mb-5"
         style={{ backgroundColor: "#F6E8DF" }}
@@ -330,6 +329,9 @@ const ContactUs = () => {
                 </p>
               )
           )}
+        </div>
+        <div>
+
         </div>
       </div>
     </>

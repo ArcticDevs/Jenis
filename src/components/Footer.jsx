@@ -129,7 +129,7 @@ const Footer = () => {
 								<h3 className='mb-4 fs-6 fw-bold text-uppercase'>Company</h3>
 								<ul className='p-0 m-0 d-flex flex-column gap-3'>
 									<li className='fs-6 fw-normal text-capitalize'><Link to="/our_story" className='text-dark'>Our Story</Link></li>
-									<li className='fs-6 fw-normal text-capitalize'><Link to="/join" className='text-dark'>Join our Team</Link></li>
+									<li className='fs-6 fw-normal text-capitalize'><Link to="/jobs" className='text-dark'>Jobs</Link></li>
 									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Location</Link></li>
 									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Franchising</Link></li>
 								</ul>

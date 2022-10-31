@@ -30,11 +30,9 @@
   top: 14px;
   width: 17px;
   height: 15px;
-  background: rgba(0, 0, 0, 0)
-    url("data:image/svg+xml;charset=utf-8,%3Csvg width='17' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 1 8.5 8.5 1 1' stroke='%23FF4612' stroke-width='2'/%3E%3C/svg%3E")
-    no-repeat scroll 0% 0% / 17px 15px padding-box border-box;
+  background: #fff url("../assets/chevron-down.png") no-repeat scroll 0% 0% /
+    15px 15px padding-box border-box;
 }
-
 
 .location_row2_select {
   appearance: none;
@@ -44,7 +42,7 @@
   border-right: 0px;
   border-bottom: 1px solid rgb(51, 51, 51);
   border-left: 0px;
-  font: 500 12px / 19.2px ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+  font: 500 16px / 19.2px ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont,
     "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
@@ -55,7 +53,7 @@
 .location_row3 {
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
   grid-column-gap: 1%;
   margin-bottom: 100px;
   max-width: 100%;
@@ -108,23 +106,24 @@
 .location_details h2,
 .location_details p {
   font-family: moderat, arial;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
-.location_details button{
-    color:#EE3900;
-    border: 2px solid #EE3900;
-    background-color: #fff;
-    text-transform: uppercase;
-    padding:11px 50px;
-    font-weight: 700;
-    letter-spacing: .13em;
+.location_details button {
+  color: #ee3900;
+  border: 2px solid #ee3900;
+  background-color: #fff;
+  text-transform: uppercase;
+  padding: 11px 50px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  transition: all 300ms;
 }
 
-.location_details button:hover{
-    color:#fff;
-    border: 2px solid #fff;
-    background-color: #EE3900;
+.location_details button:hover {
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: #ee3900 !important;
 }
 
 @media (min-width: 2560px) {
@@ -209,7 +208,7 @@
     align-items: center;
   }
 
-  .location_details div:first-child{
+  .location_details div:first-child {
     margin-bottom: 50px;
   }
 }

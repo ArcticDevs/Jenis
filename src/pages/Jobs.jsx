@@ -13,7 +13,7 @@ const JoinOurTeam = () => {
     return (
         <div>
             <div className='bg-danger bg-opacity-10 text-center py-5'>
-                <h1 className='text-uppercase fw-bold fs-2' style={{ letterSpacing: '1.5px' }}>Join our team</h1>
+                <h1 className='text-uppercase fw-bold fs-2' style={{ letterSpacing: '1.5px' }}>Jobs</h1>
             </div>
             <div className='join-head--grid flex-column-reverse flex-md-row text-md-start text-center py-4 m-0 d-flex justify-content-center align-items-center'>
                 <div className='join-content-wrap p-md-5 p-3'>

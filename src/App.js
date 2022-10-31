@@ -12,8 +12,9 @@ import OurStory from "./pages/OurStory";
 import Locations from "./pages/Locations";
 import LocationDetails from "./pages/LocationDetails";
 import ContactUs from "./pages/ContactUs";
-import JoinOurTeam from './pages/JoinOurTeam';
+import Jobs from './pages/Jobs';
 import Shop from "./pages/Shop";
+import Franchising from "./pages/Franchising";
 
 // const Home = lazy(() => import('./pages/Home'));
 
@@ -25,16 +26,7 @@ const App = () => {
     }, [location]);
 
     const locationArr = [
-        { name: "ATLANTA, GA", value: "atlanta-ga" },
-        { name: "BIRMINGHAM, AL", value: "Birmingham-al" },
-        { name: "CHARLESTON, SC", value: "charleston-sc" },
-        { name: "CHICAGO, IL", value: "chicago-il" },
-        { name: "DALLAS, TX", value: "dallas-tx" },
-        { name: "COLUMBUS, OH", value: "columbus-oh" },
-        { name: "CHARLOTTE, NC", value: "charlotte-nc" },
-        { name: "DURHAM, NC", value: "durham-nc" },
-        { name: "WASHINGTON, DC", value: "washington-dc" },
-        { name: "TAMPA, FL", value: "tampa-fl" }
+        { name: "ATLANTA, GA", value: "atlanta-ga" }
       ];
 
     return (
@@ -44,11 +36,12 @@ const App = () => {
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />
                 <Route path="/our_story" element={<OurStory />} />
-                <Route path="/join" element={<JoinOurTeam />} />
+                <Route path="/jobs" element={<Jobs />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/locations" element={<Locations locationArr={locationArr}/>} />
                 <Route path="/location/details/:location" element={<LocationDetails locationArr={locationArr}/>} />
                 <Route path="/contact-us" element={<ContactUs/>} />
+                <Route path="/franchising" element={<Franchising/>} />
             </Routes>
             {/* </Suspense> */}
             <Footer />

@@ -186,7 +186,7 @@ const Home = () => {
 					<h4>Hold Up</h4>
 					<h2>EXQUISITE ORGANIC FLAVOR COLLECTION</h2>
 					<h4 className='my-4'>Ice creams that’ll ease you out of summer.</h4>
-					<button className='btn' type='button'>Go fall In</button>
+					<button className='btn' type='button'>EXPLORE BLENDS </button>
 				</div>
 			</div>
 			<div className="home-section-2 py-5 my-5 mx-auto">
@@ -197,10 +197,10 @@ const Home = () => {
 				}
 				<div className='d-flex justify-content-between align-items-start'>
 					{!isMd && <img src={sparkle_1} alt="sparkle_image" />}
-					<h2 className='fw-bold'>FLAVOR IS EVERYTHING</h2>
+					<h2 className='fw-bold'>THE POTENTIAL OF BLENDED FLAVORS</h2>
 					{!isMd && <img src={sparkle_2} alt="sparkle_image" />}
 				</div>
-				<h3 className='my-4 mb-5 fs-6 fw-bold text-center'>We make unforgettable, crave-worthy flavors that bring people together.</h3>
+				<h3 className='my-4 mb-5 fs-6 fw-bold text-center'>We fuse exceptional flavours with a range of 25000+ combinations to create luscious swirls for you.</h3>
 				<div className='text-center'><Link to="/" className='text-transform-uppercase fw-bold pb-2 border-bottom border-1'>EXPLORE THE FLAVORS</Link></div>
 				{isMd &&
 					<div className='mt-5 text-right'>
@@ -221,23 +221,23 @@ const Home = () => {
 				</div>
 				<div className='sec4-content-wrap'>
 					<div className="sec4-content">
-						<h4>Make it Personal</h4>
-						<h2>CREATE THE PERFECT MIX</h2>
-						<h4 className='my-4'>Make the ice cream version of a mixtape. Shop by flavor to personalize your box.</h4>
-						<button className='btn' type='button'>Shop all flavors</button>
+						<h4>Personalise your Palette</h4>
+						<h2>THE IDEAL MIX JUST FOR YOU</h2>
+						<h4 className='my-4'>Our love for ice cream is as deep as your playlist. So we want you to use our flavours to craft your own ice cream box, customized just for you!</h4>
+						<button className='btn' type='button'>SAVOR THE SWEETNESS</button>
 					</div>
 				</div>
 			</div>
 			<div className="home-section-5">
-				<h2>ICE CREAMS LIKE NO OTHER</h2>
+				<h2>Looking for a new flavour ?</h2>
 				<div className="home-sec5-grid">
 					<div className='home-sec5-item'>
 						<div className='home-sec5-grid--image'>
 							<img src={home_sec5_1} alt="" />
 						</div>
 						<div className='home-sec5-grid--content'>
-							<h3>Creative Flavors</h3>
-							<p>We make unforgettable, crave-worthy ice creams you simply won’t find anywhere else.</p>
+							<h3>Looking for a new flavour ?</h3>
+							<p>We use fresh, natural ingredients without preservatives, artificial flavours, or dyes to craft our delicious frozen creations.</p>
 						</div>
 					</div>
 					<div className='home-sec5-item'>
@@ -245,8 +245,8 @@ const Home = () => {
 							<img src={home_sec5_2} alt="" />
 						</div>
 						<div className='home-sec5-grid--content'>
-							<h3>Unreal Texture</h3>
-							<p>Built completely from scratch, our flavors have an impossibly smooth, buttercream-like body.</p>
+							<h3>SUPERLATIVE QUALITY </h3>
+							<p>Unlike other ice cream makers, our unique process makes the ice cream inside stay soft & swirly all the way down to the bottom of the cones.</p>
 						</div>
 					</div>
 					<div className='home-sec5-item'>
@@ -254,8 +254,8 @@ const Home = () => {
 							<img src={home_sec5_3} alt="" />
 						</div>
 						<div className='home-sec5-grid--content'>
-							<h3>A Force for Good</h3>
-							<p>From the way we make our ice creams to our scoop shops nationwide, we build community wherever we go.</p>
+							<h3>UNCANNY UNIQUENESS</h3>
+							<p>We've created the world’s most unique ice cream flavors that you simply won't find anywhere else.</p>
 						</div>
 					</div>
 				</div>
@@ -263,26 +263,26 @@ const Home = () => {
 			<div className="home-section-6">
 				<div className="home-sec6-content-wrap">
 					<div className="home-sec6-content">
-						<h6>How It Works</h6>
-						<h3>ICE CREAM IN THE MAIL? YES, THIS IS REAL LIFE.</h3>
+						<h6>So Much to Choose From</h6>
+						<h3>We're the new ice cream guys and we're just getting started.</h3>
 						<div className='sec6-content-list'>
 							<div className='content-item'>
-								<div className='item-image'>
+								{/* <div className='item-image'>
 									<img src={home_del_1} alt="" />
-								</div>
-								<p>Guaranteed frozen delivery. Pints arrive in an insulated box with plenty of dry ice.</p>
+								</div> */}
+								<p>Treat yourself with a taste of adventure and spice up your daily routine with new flavors, or indulge in the classics. We’ve got it all!</p>
 							</div>
 							<div className='content-item'>
-								<div className='item-image'>
+								{/* <div className='item-image'>
 									<img src={home_del_2} alt="" />
-								</div>
-								<p>Flat-rate shipping nationwide. No matter how many pints you order.</p>
+								</div> */}
+								<p>Think chocolate-covered espresso beans or brownie batter or ganache. Make that moment and make it sweet, because our flavors are out of this world and so are you.</p>
 							</div>
 							<div className='content-item'>
-								<div className='item-image'>
+								{/* <div className='item-image'>
 									<img src={home_del_3} alt="" />
-								</div>
-								<p>Instagram-worthy unboxing. Pints are packaged with an artful attention to detail.</p>
+								</div> */}
+								<p>From classics like Cookie Dough & Mint, to combinations like our Caramel & Chocolate Fudge Brownie, we will always have your back when it comes to ice cream satisfaction.</p>
 							</div>
 						</div>
 					</div>
@@ -293,8 +293,8 @@ const Home = () => {
 			</div>
 			<div className="home-section-7">
 				<div className="sec-head">
-					<h2>BEST SELLERS</h2>
-					<p>Easily the most memorable ice creams Lorem has ever created. Nothing flies out of our freezer faster than these tried-and-true best-sellers.</p>
+					<h2>The Best of the Best</h2>
+					<p>If you're looking for a flavor that really pops, our ice creams will do just the trick. These unique combinations will wow you and everyone that tries a bite! </p>
 				</div>
 				<Carousel carouselData={carouselSection7} />
 			</div>

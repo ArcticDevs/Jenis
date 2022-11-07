@@ -31,7 +31,7 @@ const Locations = ({locationArr}) => {
           </select>
         </div>
       </div>
-      <div className="location_row3">
+      <div className="location_row3 mb-5">
         {locationArr.map((curr, index) => (
           <div className="location_row3_box" key={index}>
             <div onClick={() => navigate(`/location/details/${curr.value}`)}>

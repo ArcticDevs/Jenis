@@ -81,6 +81,11 @@ a {
     margin-top: 220px;
     z-index: 6;
   }
+
+  .small-text-above-content{
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
   
 @media only screen and (max-width: 800px) {
   .app {
@@ -91,3 +96,28 @@ a {
     z-index: 6;
   }
 }
+
+@media(max-width:550px){
+  .mobile-accordion-text{
+    font-size: 12px !important;
+    text-align: center;
+  }
+
+  .mobile-title-text{
+    font-size: 22px !important;
+    text-align: center;
+  }
+
+  .mobile-para-text{
+    font-size: 14px !important;
+    text-align: center;
+    padding:0 10px;
+  }
+
+  .mobile-title-text2{
+    font-size: 18px !important;
+    text-align: center;
+
+  }
+}
+

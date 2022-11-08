@@ -3,14 +3,14 @@ import "../styles/ContactUs.css";
 import useBreakpoints from "../customHooks/useBreakpoints";
 
 const ContactUs = () => {
-  const [activeTopic, setActiveTopic] = useState("General Inquiries");
+  const [activeTopic, setActiveTopic] = useState("GENERAL INQUIRIES");
 
   let contentArr = [
     {
-      topic: "General Inquiries",
+      topic: "GENERAL INQUIRIES",
       content: (
         <>
-          <h4 style={{ textTransform: "uppercase", fontWeight: "600" }}>
+          <h4 style={{ fontWeight: "600",textTransform: "uppercase"}}>
             General Inquiries
           </h4>
           <br />
@@ -231,7 +231,7 @@ const ContactUs = () => {
     //   ),
     // },
     {
-      topic: "Home Office",
+      topic: "HOME OFFICE",
       content: (
         <>
           <h4 style={{ textTransform: "uppercase", fontWeight: "600" }}>
@@ -279,7 +279,7 @@ const ContactUs = () => {
   return (
     <>
       <div
-        className="location_row1 py-5 mb-5"
+        className="location_row1 py-5 mb-5 mobile-section2"
         style={{ backgroundColor: "#F6E8DF" }}
       >
         <h2 className="fw-bolder">CONTACT US</h2>
@@ -324,7 +324,7 @@ const ContactUs = () => {
           {contentArr.map(
             (curr) =>
               curr.topic === activeTopic && (
-                <p className="contactus_content col-xxl-12 col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12">
+                <p className="contactus_content col-xxl-12 col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 mobile-para-text">
                   {curr.content}
                 </p>
               )

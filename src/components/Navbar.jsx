@@ -65,7 +65,7 @@ const DesktopSideBar = ({ showSidebar, onClose }) => {
             <Link to="/jobs">Jobs</Link>
           </li>
           <li>
-            <Link to="/">Gallery</Link>
+            <Link to="/gallery">Gallery</Link>
           </li>
           <li>
             <Link to="/contact-us">Contact Us</Link>
@@ -97,13 +97,7 @@ const DesktopSideBar = ({ showSidebar, onClose }) => {
             </li>
             <li>
               <Link to="/">New Arrivals</Link>
-            </li>
-            <li>
-              <Link to="/">Dairy Free</Link>
-            </li>
-            <li>
-              <Link to="/">Gluten Free</Link>
-            </li>
+            </li>           
           </ul>
           <h3>Collections</h3>
           <ul>
@@ -112,10 +106,7 @@ const DesktopSideBar = ({ showSidebar, onClose }) => {
             </li>
             <li>
               <Link to="/">Best Sellers</Link>
-            </li>
-            <li>
-              <Link to="/">Fall Favorites</Link>
-            </li>
+            </li>            
             <li>
               <Link to="/">Single Servings</Link>
             </li>
@@ -267,7 +258,9 @@ const Navbar = () => {
               <div className="menu-btn-bar"></div>
             </div>
             <div className="nav-logo">
+            <Link to="/">
               <img src={Logo} alt="Logo" />
+              </Link>
             </div>
           </div>
           <div className="mob-menu-container">
@@ -301,7 +294,7 @@ const Navbar = () => {
                   <Link to="/jobs">Jobs</Link>
                 </li>
                 <li>
-                  <Link to="/">Gallery</Link>
+                  <Link to="/gallery">Gallery</Link>
                 </li>
                 <li>
                   <Link to="/contact-us">Contact Us</Link>
@@ -333,12 +326,6 @@ const Navbar = () => {
                 <li>
                   <Link to="/">New Arrivals</Link>
                 </li>
-                <li>
-                  <Link to="/">Dairy Free</Link>
-                </li>
-                <li>
-                  <Link to="/">Gluten Free</Link>
-                </li>
               </ul>
               <h3>Collections</h3>
               <ul>
@@ -348,9 +335,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/">Best Sellers</Link>
                 </li>
-                <li>
-                  <Link to="/">Fall Favorites</Link>
-                </li>
+
                 <li>
                   <Link to="/">Single Servings</Link>
                 </li>
@@ -460,7 +445,7 @@ const Navbar = () => {
             </li>
 
             <li className="nav-hover">
-              <Link to="/">Gallery</Link>
+              <Link to="/gallery">Gallery</Link>
             </li>
             <li className="nav-hover">
               <Link to="/contact-us">Contact Us</Link>
@@ -488,12 +473,6 @@ const Navbar = () => {
                     <li>
                       <Link to="/">New Arrivals</Link>
                     </li>
-                    <li>
-                      <Link to="/">Dairy Free</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Gluten Free</Link>
-                    </li>
                   </ul>
                 </div>
                 <div>
@@ -504,9 +483,6 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link to="/">Best Sellers</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Fall Favorites</Link>
                     </li>
                     <li>
                       <Link to="/">Single Servings</Link>

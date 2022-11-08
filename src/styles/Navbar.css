@@ -66,6 +66,7 @@ nav {
     position: relative;
     display: block;
     width: 80px;
+    margin: 5px 0;
 }
 
 .nav-logo img {
@@ -818,6 +819,6 @@ nav {
 @media(max-width:500px){
     .nav-logo img {
         transform:scale(2.2);
-        margin-top:5px;
+        margin:10px 0;
     }
 }

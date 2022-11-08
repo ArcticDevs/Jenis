@@ -30,6 +30,7 @@ function CustomToggle({ children, eventKey }) {
         decoratedOnClick();
         setClicked(!clicked);
       }}
+      className="small-text-above-content"
     >
       {children}
       {clicked ? (
@@ -38,10 +39,7 @@ function CustomToggle({ children, eventKey }) {
         </svg>
       ) : (
         <svg style={{ width: "24px" }} viewBox="0 0 24 24">
-          <path
-            fill="#ee3c2f"
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-          />
+          <path fill="#ee3c2f" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
         </svg>
       )}
     </div>
@@ -71,28 +69,23 @@ const Franchising = () => {
   ];
 
   return (
-    <div className="row container-fluid p-0">
+    <div className="row p-0">
       <div
-        className="location_row1 py-5"
+        className="location_row1 py-5 mobile-section2"
         style={{ backgroundColor: "#F6E8DF" }}
       >
         <h2 className="fw-bolder">Franchising</h2>
       </div>
       <div className="home-section-2 py-5 mt-5 mx-auto col-xxl-6 col-xl-6 col-lg-6 col-md-11 col-sm-11 col-11">
-        {isMd && (
-          <div className="mb-5 me-auto">
-            <img src={sparkle_1} alt="sparkle_image" />
-          </div>
-        )}
-        <div className="d-flex justify-content-between align-items-start">
-          {!isMd && <img src={sparkle_1} alt="sparkle_image" />}
-          <h2 className="fw-bold text-center">
+        <div className="d-flex justify-content-between align-items-start mobile-section2">
+          <img src={sparkle_1} alt="sparkle_image" />
+          <h2 className="fw-bold text-center mobile-title-text ">
             NO MATTER THE EVENT, JENI’S IS THE PERFECT WAY TO CELEBRATE.
           </h2>
-          {!isMd && <img src={sparkle_2} alt="sparkle_image" />}
+          <img src={sparkle_2} alt="sparkle_image" />
         </div>
         <h3
-          className="my-4 mb-5 fs-6 fw-bold text-center col-xxl-10 col-xl-10 col-lg-10 col-md-11 col-sm-12 col-12 mx-auto"
+          className="my-4 mb-5 fs-6 text-center col-xxl-10 col-xl-10 col-lg-10 col-md-11 col-sm-12 col-12 mx-auto"
           style={{ lineHeight: "22px" }}
         >
           Our Events & Catering menu features Street Treats—our best-selling ice
@@ -115,11 +108,6 @@ const Franchising = () => {
           We’ll respond back with a quote. Once approved, please allow up to 2
           weeks for processing before your order(s) ships.
         </h3>
-        {isMd && (
-          <div className="mt-5 text-right">
-            <img src={sparkle_1} className="ms-auto" alt="sparkle_image" />
-          </div>
-        )}
       </div>
       <div className="w-100 mx-auto d-flex justify-content-between flex-xxl-row flex-xl-row flex-lg-row flex-column flex-md-column flex-sm-column">
         <img
@@ -127,7 +115,7 @@ const Franchising = () => {
           alt=""
           loading="lazy"
           className={`img-fluid  ${
-            isMd || isTm || isSm || isXs ? "w-100 ms-2" : "w-50 ms-1 me-3"
+            isMd || isTm || isSm || isXs ? "w-100" : "w-50 me-3"
           }`}
         />
         <img
@@ -135,26 +123,39 @@ const Franchising = () => {
           alt=""
           loading="lazy"
           className={`img-fluid  ${
-            isMd || isTm || isSm || isXs ? "w-100 ms-2 mt-3" : "w-50"
+            isMd || isTm || isSm || isXs ? "w-100 mt-3" : "w-50"
           }`}
         />
       </div>
       <div className="my-4 mx-auto col-xxl-6 col-xl-6 col-lg-6 col-md-11 col-sm-12 col-12">
-        <h2 className="fw-bold text-center my-5">FRANCHISING FAQS</h2>
+        <h2 className="fw-bold text-center my-5 mobile-title-text">FRANCHISING FAQS</h2>
         <div className="mx-auto col-xxl-10 col-xl-10 col-lg-12 col-md-11 col-sm-11 col-11">
           {FAQarr.map((curr, index) => (
-            <div className='mt-3'>
+            <div className="mt-3">
               <Accordion>
-                <Card style={{ border: "none",backgroundColor: "#FAF7F5" ,padding:'5px'}}>
+                <Card
+                  style={{
+                    border: "none",
+                    backgroundColor: "#FAF7F5",
+                    padding: "5px",
+                  }}
+                >
                   <Card.Header
                     style={{ backgroundColor: "#FAF7F5", border: "none" }}
                   >
-                    <CustomToggle eventKey="0"><h6 style={{
-                        fontSize: "16px",
-                        fontWeight: "400",
-                        letterSpacing: "1.5px",
-                        textShadow : '0 0 0 #000'
-                      }}>{curr.title}</h6>  </CustomToggle>
+                    <CustomToggle eventKey="0">
+                      <h6
+                        style={{
+                          fontSize: "16px",
+                          fontWeight: "400",
+                          letterSpacing: "1.5px",
+                          textShadow: "0 0 0 #000",
+                        }}
+                        className="mobile-accordion-text"
+                      >
+                        {curr.title}
+                      </h6>{" "}
+                    </CustomToggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey="0">
                     <Card.Body
@@ -163,11 +164,11 @@ const Franchising = () => {
                         fontSize: "16px",
                         fontWeight: "400",
                         letterSpacing: "1.5px",
-                        textShadow : '0 0 0 #000'
+                        textShadow: "0 0 0 #000",
                       }}
                       className="d-flex flex-column"
                     >
-                      <div>{curr.ans}</div>
+                      <div className="mobile-accordion-text">{curr.ans}</div>
                     </Card.Body>
                   </Accordion.Collapse>
                 </Card>

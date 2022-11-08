@@ -86,3 +86,13 @@
     font-size: 14px;
     font-weight: bold;
 }
+
+@media(max-width:550px){
+    .item-image{
+        height:200px
+    }
+
+    .item-content{
+        width: 200px;
+    }
+}

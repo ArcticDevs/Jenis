@@ -16,7 +16,7 @@ const Locations = ({locationArr}) => {
 
   return (
     <div>
-      <div className="location_row1">
+      <div className="location_row1 mobile-section2">
         <h2>SCOOP SHOPS</h2>
       </div>
       <div className="location_row2">

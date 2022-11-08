@@ -79,7 +79,7 @@ const Footer = () => {
 			</div> */}
 			<div className='footer-body row m-0'>
 				<div className='footer-left bg-danger bg-opacity-10 col-lg-6 col-12 ps-4'>
-					<h2 className='fs-4 fw-bold'>BE THE FIRST TO KNOW ABOUT NEW FLAVORS AND MORE</h2>
+					<h2 className='fw-bold mobile-title-text'>BE THE FIRST TO KNOW ABOUT NEW FLAVORS AND MORE</h2>
 					<form action="">
 						<div className='row footer-form my-5 '>
 							<div className='col-md-8 col-12 ps-3'>
@@ -116,7 +116,7 @@ const Footer = () => {
 					<div className='footer-right col-lg-6 col-12 bg-light d-flex flex-column justify-content-between'>
 						<div className='row'>
 							<div className='col d-flex flex-column'>
-								<h3 className='mb-4 fs-6 fw-bold text-uppercase'>Menu</h3>
+								<h3 className='mb-4 fs-6 fw-bold text-uppercase '>Menu</h3>
 								<ul className='p-0 m-0 d-flex flex-column gap-3'>
 									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>All Flavors</Link></li>
 									<li className='fs-6 fw-normal text-capitalize'><Link to="/" className='text-dark'>Collections</Link></li>
@@ -143,7 +143,7 @@ const Footer = () => {
 							</div>
 						</div>
 						<div className="row footer-end mt-auto">
-							<h5 className='fw-normal text-uppercase fs-6 w-100'>©2022 The Bros Creamery, LLC. ALL RIGHTS RESERVED</h5>
+							<h5 className='fw-normal text-uppercase w-100' style={{fontSize:'14px'}}>©2022 The Bros Creamery, LLC. ALL RIGHTS RESERVED</h5>
 						</div>
 					</div>
 					:
@@ -159,7 +159,7 @@ const Footer = () => {
 							<a className='text-black fw-normal' href="http://" target="_blank" rel="noopener noreferrer">Accessbility Statement</a>
 						</div> */}
 						<div className="footer-end pt-3">
-							<h5 className='fw-normal text-uppercase fs-6 w-100'>©2022 The Bros Creamery, LLC. ALL RIGHTS RESERVED</h5>
+							<h5 className='fw-normal text-uppercase w-100' style={{fontSize:'12px'}}>©2022 The Bros Creamery, LLC. ALL RIGHTS RESERVED</h5>
 						</div>
 					</div>
 				}

@@ -321,7 +321,7 @@
   }
 
   .ot_row2 {
-    margin: 300px auto 100px auto;
+    margin: 200px auto 100px;
     width: 99%;
   }
 
@@ -341,8 +341,17 @@
     padding:0 5%;
   }
 
+  .ot_row4{
+    margin-top: -80px;
+    margin-bottom:60px
+  }
+  
+  .ot_row6{
+    margin-top: -80px;
+  }
+
   .ot_row7 {
-    margin: 100px 10px;
+    margin: -60px 10px;
   }
   
   .ot_row7 h4,.ot_row7 p {

@@ -3,6 +3,7 @@
     display: block;
     width: 100%;
     height: 100vh;
+    margin-top:-50px;
 }
 
 .home-sec1-image {
@@ -52,6 +53,7 @@
     text-transform: uppercase;
     background-color: var(--theme-color) !important;
     border-radius: 0;
+    white-space: nowrap;
 }
 
 /* ---------------Home section 2--------------- */
@@ -250,6 +252,7 @@
     display: flex;
     align-items: center;
     background-color: #fff;
+    margin-top: -10px;
 }
 
 .home-section-6 .home-sec6-image {
@@ -271,14 +274,14 @@
     position: relative;
     display: block;
     flex: 48%;
-    padding: 2vw 4vw;
+    padding: 0vw 4vw;
 }
 
 .home-section-6 .home-sec6-content {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 450px;
+    width: 550px;
     margin: auto;
 }
 
@@ -676,11 +679,64 @@
 }
 
 @media only screen and (max-width: 550px) {
+    .home-section-1-content{
+        width: 100%;
+        margin-bottom:-70px;
+    }
+
+    .home-section-1-content h2,.sec4-content h2,.home-sec6-content h3{
+        font-size:22px !important;
+    }
+
+    .home-section-1-content button,.sec4-content button{
+        width: 100%;
+        white-space: nowrap !important;
+    }
+
+    .sec4-content h4,.home-section-2 h3,.home-sec5-grid--content h3,.home-sec5-grid--content p,.home-sec6-content p{
+        font-size:14px !important;
+    }
+
+    .home-section-3{
+        margin-top: -20px;
+    }
+
     .home-section-4 .sec4-content {
         width: 100%;
+    }
+
+    .home-section-4 .sec4-image img {
+        height: 320px;
+    }
+
+    .sec4-content,.home-sec6-content{
+        margin-top: 20px !important;
+        margin-bottom: -20px !important;
+    }
+
+    .home-sec5-item{
+        display:flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content:center;
+    }
+
+    .home-sec5-grid--content{
+        margin-top: 10px;
+        text-align:center;
+    }
+
+    .home-sec5-grid--content h3{
+        margin:0.5px 0 !important;
+    }
+
+    .home-sec6-content p{
+        text-align:center;
     }
 
     .sec9-grid {
         width: 300vw;
     }
+
+    
 }

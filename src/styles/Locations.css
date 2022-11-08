@@ -206,6 +206,8 @@
   .location_details {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .location_details div:first-child {

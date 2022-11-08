@@ -5,7 +5,7 @@ import story_2 from '../assets/home/home_sec8.jpg'
 
 const OurStory = () => {
   return (
-    <div className="ot_container">
+    <div className="ot_container mobile-section2">
       <div className="ot_row1">
         <img
           src={story_1}
@@ -13,8 +13,8 @@ const OurStory = () => {
           className="img-fluid"
         />
         <div className="ot_row1_content">
-          <h2>Who we are</h2>
-          <p>
+          <h2 className="mobile-title-text">Who we are</h2>
+          <p className='mobile-para-text'>
             We are a creative-led, community-spirited company on a mission to
             make better ice creams and bring people together.
           </p>
@@ -26,14 +26,14 @@ const OurStory = () => {
             src="https://cdn.shopify.com/s/files/1/0592/5476/7822/files/Cone.png?v=1646848392"
             alt=""
           />
-          <h3>A NEW STANDARD IN ICE CREAM</h3>
+          <h3 className="mobile-title-text2">A NEW STANDARD IN ICE CREAM</h3>
           <img
             src="https://cdn.shopify.com/s/files/1/0592/5476/7822/files/Cone.png?v=1646848392"
             alt=""
           />
         </div>
         <div className="ot_row2_content">
-          <p>
+          <p className="mobile-para-text">
             We build ice creams completely from scratch using a unique recipe
             honed and perfected over more than 20 years by our founder, Jeni
             Britton. Our ice creams have a uniquely smooth texture and
@@ -55,8 +55,8 @@ const OurStory = () => {
           />
         </div>
         <div className="ot_row3_content">
-          <h2>Dos Bros</h2>
-          <p>
+          <h2 className='mobile-title-text'>Dos Bros</h2>
+          <p className='mobile-para-text'>
             Our founder literally wrote the book on ice cream—and she has the
             James Beard Award to prove it. With her ahead-of-the-trend vision,
             Bros revolutionized the ice cream industry, forever changing the way
@@ -67,7 +67,7 @@ const OurStory = () => {
       </div>
       <div className="ot_row4">
         <h3>A FORCE FOR GOOD</h3>
-        <p>
+        <p className='mobile-para-text'>
           We're proud to be a Certified B Corp endorsed by the international
           nonprofit B Lab as a company that meets rigorous standards of social
           and environmental performance, accountability, and transparency. It
@@ -78,7 +78,7 @@ const OurStory = () => {
           company culture.
         </p>
       </div>
-      <div className="ot_row3 ot_row5">
+      <div className="ot_row3 ot_row5" style={{marginBottom:'-5 0px'}}>
         <div className="ot_row3_image">
           <img
             src="https://cdn.shopify.com/s/files/1/0592/5476/7822/files/Rectangle_810_de77b1d9-469d-4d6e-919d-d0e5efb0fa7f_1500x.jpg?v=1647542658"
@@ -87,8 +87,8 @@ const OurStory = () => {
           />
         </div>
         <div className="ot_row3_content">
-          <h2>THE FELLOWSHIP MODEL</h2>
-          <p>
+          <h2 className='mobile-title-text'>THE FELLOWSHIP MODEL</h2>
+          <p className='mobile-para-text'>
             We make ice cream to bring people together. It’s our reason for
             being and we operate as a community—in partnership with the growers,
             makers, and producers who supply us with ingredients.
@@ -105,8 +105,8 @@ const OurStory = () => {
           />
         </div>
         <div className="ot_row3_content">
-          <h2>Join our team</h2>
-          <p>
+          <h2 className='mobile-title-text'>Join our team</h2>
+          <p className='mobile-para-text'>
             It takes a community to make and share ice creams the way we do. We
             truly believe our differences are our strengths. It’s about each of
             us bringing our awesomeness in — our whole selves. And together we

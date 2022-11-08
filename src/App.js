@@ -15,6 +15,7 @@ import ContactUs from "./pages/ContactUs";
 import Jobs from './pages/Jobs';
 import Shop from "./pages/Shop";
 import Franchising from "./pages/Franchising";
+import Gallery from "./pages/Gallery";
 
 // const Home = lazy(() => import('./pages/Home'));
 
@@ -42,6 +43,7 @@ const App = () => {
                 <Route path="/location/details/:location" element={<LocationDetails locationArr={locationArr}/>} />
                 <Route path="/contact-us" element={<ContactUs/>} />
                 <Route path="/franchising" element={<Franchising/>} />
+                <Route path='/gallery' element={<Gallery />} />
             </Routes>
             {/* </Suspense> */}
             <Footer />

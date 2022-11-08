@@ -30,25 +30,25 @@ const LocationDetails = ({locationArr}) => {
           />
         </div>
         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-11 col-sm-10 col-11">
-          <h2 className="fw-bold">JENI'S WESTSIDE PROVISIONS</h2>
-          <h5 className="mt-3">{location && location}</h5>
-          <p className="my-4 fw-bold">
+          <h2 className="fw-bold mobile-title-text2">JENI'S WESTSIDE PROVISIONS</h2>
+          <h5 className="mt-3 mobile-title-text2">{location && location}</h5>
+          <p className="my-4 fw-bold mobile-para-text">
             Address <br />
             <span className="text-danger">1198 Howell Mill</span> <br />{" "}
             <span className="text-danger">Road Atlanta, GA 30318</span>{" "}
           </p>
-          <p className="my-4 fw-bold">
+          <p className="my-4 fw-bold mobile-para-text">
             Contact <br />
             <span className="text-danger">(404) 355-6050</span> <br />{" "}
           </p>
-          <p className="my-4 fw-bold">
+          <p className="my-4 fw-bold mobile-para-text">
             Hours
             <br />
             Sunday - Thursday: Noon to midnight
             <br />
             Friday - Saturday: Noon - 1am
           </p>
-          <button>local delivery</button>
+          <button className='mobile-para-text'>local delivery</button>
         </div>
       </div>
     </div>

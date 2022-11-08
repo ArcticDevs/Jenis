@@ -37,8 +37,8 @@ const Card = ({ cardData }) => {
                         {cardData.title}
                     </Link>
                 </h3>
-                <p>{cardData.body}</p>
-                <h6>{"₹ " + cardData.price}</h6>
+                <p>{cardData?.body}</p>
+                <h6>{cardData.price && "₹ " + cardData.price}</h6>
                 {/* <h6>{"₹" + cardData.price.toFixed(2)}</h6> */}
             </div>
         </div>

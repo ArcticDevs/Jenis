@@ -183,35 +183,27 @@ const Home = () => {
 					<img src={home_1} alt="home_image" />
 				</div>
 				<div className="home-section-1-content">
-					<h4>Hold Up</h4>
+					<h4 className="small-text-above-content">Hold Up</h4>
 					<h2>EXQUISITE ORGANIC FLAVOR COLLECTION</h2>
 					<h4 className='my-4'>Ice creams that’ll ease you out of summer.</h4>
 					<button className='btn' type='button'>EXPLORE BLENDS </button>
 				</div>
 			</div>
-			<div className="home-section-2 py-5 my-5 mx-auto">
-				{isMd &&
-					<div className='mb-5 me-auto'>
-						<img src={sparkle_1} alt="sparkle_image" />
-					</div>
-				}
+			<div className="home-section-2 pt-5 mt-5 mx-auto">
+				
 				<div className='d-flex justify-content-between align-items-start'>
-					{!isMd && <img src={sparkle_1} alt="sparkle_image" />}
+					<img src={sparkle_1} alt="sparkle_image" />
 					<h2 className='fw-bold'>THE POTENTIAL OF BLENDED FLAVORS</h2>
-					{!isMd && <img src={sparkle_2} alt="sparkle_image" />}
+					<img src={sparkle_2} alt="sparkle_image" />
 				</div>
-				<h3 className='my-4 mb-5 fs-6 fw-bold text-center'>We fuse exceptional flavours with a range of 25000+ combinations to create luscious swirls for you.</h3>
+				<h3 className='my-4 mb-5 fs-6 text-center'>We fuse exceptional flavours with a range of 25000+ combinations to create luscious swirls for you.</h3>
 				<div className='text-center'><Link to="/" className='text-transform-uppercase fw-bold pb-2 border-bottom border-1'>EXPLORE THE FLAVORS</Link></div>
-				{isMd &&
-					<div className='mt-5 text-right'>
-						<img src={sparkle_1} className="ms-auto" alt="sparkle_image" />
-					</div>
-				}
+				
 			</div>
 			<div className="home-section-3">
 				<div className="sec-head">
-					<h2 className='text-uppercase'>True Flavors</h2>
-					<p>The best autumnal views could be in your freezer. Shop our favorite flavors for eating the season.</p>
+					<h2 className='text-uppercase'>TRUE INGREDIENTS FOR THE BEST FLAVORS </h2>
+					<p>Gather your loved ones, turn up the holiday cheer, and enjoy these holiday favourite flavours with numerous ingredients to choose from.</p>
 				</div>
 				<Carousel carouselData={carouselSection3} />
 			</div>
@@ -221,7 +213,7 @@ const Home = () => {
 				</div>
 				<div className='sec4-content-wrap'>
 					<div className="sec4-content">
-						<h4>Personalise your Palette</h4>
+						<h4 className="small-text-above-content">Personalise your Palette</h4>
 						<h2>THE IDEAL MIX JUST FOR YOU</h2>
 						<h4 className='my-4'>Our love for ice cream is as deep as your playlist. So we want you to use our flavours to craft your own ice cream box, customized just for you!</h4>
 						<button className='btn' type='button'>SAVOR THE SWEETNESS</button>
@@ -229,14 +221,14 @@ const Home = () => {
 				</div>
 			</div>
 			<div className="home-section-5">
-				<h2>Looking for a new flavour ?</h2>
+				<h2 style={{textTransform: "uppercase"}}>Looking for a new flavour ?</h2>
 				<div className="home-sec5-grid">
 					<div className='home-sec5-item'>
 						<div className='home-sec5-grid--image'>
 							<img src={home_sec5_1} alt="" />
 						</div>
 						<div className='home-sec5-grid--content'>
-							<h3>Looking for a new flavour ?</h3>
+							<h3 style={{margin:'-10px 0'}}>Looking for a new flavour ?</h3>
 							<p>We use fresh, natural ingredients without preservatives, artificial flavours, or dyes to craft our delicious frozen creations.</p>
 						</div>
 					</div>
@@ -245,7 +237,7 @@ const Home = () => {
 							<img src={home_sec5_2} alt="" />
 						</div>
 						<div className='home-sec5-grid--content'>
-							<h3>SUPERLATIVE QUALITY </h3>
+							<h3 style={{margin:'-10px 0'}}>SUPERLATIVE QUALITY </h3>
 							<p>Unlike other ice cream makers, our unique process makes the ice cream inside stay soft & swirly all the way down to the bottom of the cones.</p>
 						</div>
 					</div>
@@ -254,7 +246,7 @@ const Home = () => {
 							<img src={home_sec5_3} alt="" />
 						</div>
 						<div className='home-sec5-grid--content'>
-							<h3>UNCANNY UNIQUENESS</h3>
+							<h3 style={{margin:'-10px 0'}}>UNCANNY UNIQUENESS</h3>
 							<p>We've created the world’s most unique ice cream flavors that you simply won't find anywhere else.</p>
 						</div>
 					</div>
@@ -263,7 +255,7 @@ const Home = () => {
 			<div className="home-section-6">
 				<div className="home-sec6-content-wrap">
 					<div className="home-sec6-content">
-						<h6>So Much to Choose From</h6>
+						<h6 className="small-text-above-content">So Much to Choose From</h6>
 						<h3>We're the new ice cream guys and we're just getting started.</h3>
 						<div className='sec6-content-list'>
 							<div className='content-item'>

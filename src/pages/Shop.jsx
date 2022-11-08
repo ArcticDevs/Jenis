@@ -152,13 +152,13 @@ const DropdownCheckbox = ({ label, value }) => {
 
 const Shop = () => {
 	return (
-		<div>
+		<div className='mb-5'>
 			<div className='bg-danger bg-opacity-10 text-center py-5'>
 				<h1 className='text-uppercase fw-bold fs-2' style={{ letterSpacing: '1.5px' }}>ALL FLAVORS</h1>
 				<p className='pt-3 w-50 m-auto fs-6 fw-normal'>Our order minimum is 4 pints. But after that it's up to you. Our boxes are designed to neatly hold up to 6, 9, or 18 pints.</p>
 			</div>
 			<div className=''>
-				<div className='py-4 px-3'>
+				<div className='pt-3 px-3'>
 					<div className='d-flex justify-content-between align-items-center'>
 						<div className='filter-wrap d-flex align-items-center'>
 							<h3 className='fs-6 fw-bold m-0'>Filter:</h3>

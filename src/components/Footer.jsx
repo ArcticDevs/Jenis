@@ -12,7 +12,7 @@ const footerData = [
 	{
 		id: 1,
 		name: "Menu",
-		subList: [{ head: "All Falvor", link: "/" }, { head: "Collections", link: "/" }, { head: "Best Sellers", link: "/" }, { head: "Fall Favorites", link: "/" }, { head: "Single Serving", link: "/" }]
+		subList: [{ head: "All Flavor", link: "/" }, { head: "Collections", link: "/" }, { head: "Best Sellers", link: "/" }, { head: "Fall Favorites", link: "/" }, { head: "Single Serving", link: "/" }]
 	},
 	{
 		id: 2,

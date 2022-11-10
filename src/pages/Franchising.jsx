@@ -69,13 +69,16 @@ const Franchising = () => {
   ];
 
   return (
-    <div className="row p-0">
+    <div
+      className="mobile-section2"      
+    >
       <div
-        className="location_row1 py-5 mobile-section2"
+        className="location_row1 py-5"
         style={{ backgroundColor: "#F6E8DF" }}
       >
         <h2 className="fw-bolder">Franchising</h2>
       </div>
+
       <div className="home-section-2 py-5 mt-5 mx-auto col-xxl-6 col-xl-6 col-lg-6 col-md-11 col-sm-11 col-11">
         <div className="d-flex justify-content-between align-items-start mobile-section2">
           <img src={sparkle_1} alt="sparkle_image" />
@@ -109,13 +112,13 @@ const Franchising = () => {
           weeks for processing before your order(s) ships.
         </h3>
       </div>
-      <div className="w-100 mx-auto d-flex justify-content-between flex-xxl-row flex-xl-row flex-lg-row flex-column flex-md-column flex-sm-column">
+      <div className="mx-auto d-flex justify-content-between flex-xxl-row flex-xl-row flex-lg-row flex-column flex-md-column flex-sm-column">
         <img
           src="https://cdn.shopify.com/s/files/1/0592/5476/7822/files/22-4_LandingPage_Catering_1_1200.jpg?v=1649950975"
           alt=""
           loading="lazy"
-          className={`img-fluid  ${
-            isMd || isTm || isSm || isXs ? "w-100" : "w-50 me-3"
+          className={`img-fluid ${
+            isMd || isTm || isSm || isXs ? "w-100" : "w-50 me-5"
           }`}
         />
         <img
@@ -127,9 +130,11 @@ const Franchising = () => {
           }`}
         />
       </div>
-      <div className="my-4 mx-auto col-xxl-6 col-xl-6 col-lg-6 col-md-11 col-sm-12 col-12">
-        <h2 className="fw-bold text-center my-5 mobile-title-text">FRANCHISING FAQS</h2>
-        <div className="mx-auto col-xxl-10 col-xl-10 col-lg-12 col-md-11 col-sm-11 col-11">
+      <div className="my-4 mx-auto col-xxl-6 col-xl-6 col-lg-6 col-md-11 col-sm-10 col-12">
+        <h2 className="fw-bold text-center my-5 mobile-title-text">
+          FRANCHISING FAQS
+        </h2>
+        <div className="mx-auto col-xxl-10 col-xl-10 col-lg-12 col-md-11 col-sm-11 col-12">
           {FAQarr.map((curr, index) => (
             <div className="mt-3">
               <Accordion>

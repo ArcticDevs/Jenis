@@ -1,8 +1,6 @@
 .location_row1 {
-  max-width: 100%;
-  overflow-x: hidden;
   background-color: #aee0e1;
-  padding: 30px 10px;
+  padding: 30px 0px;
   text-align: center;
 }
 

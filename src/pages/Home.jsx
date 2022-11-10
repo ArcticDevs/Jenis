@@ -189,7 +189,7 @@ const Home = () => {
 					<button className='btn' type='button'>EXPLORE BLENDS </button>
 				</div>
 			</div>
-			<div className="home-section-2 pt-5 mt-5 mx-auto">
+			<div className="home-section-2 pt-5 my-5 mx-auto">
 				
 				<div className='d-flex justify-content-between align-items-start'>
 					<img src={sparkle_1} alt="sparkle_image" />
@@ -228,7 +228,7 @@ const Home = () => {
 							<img src={home_sec5_1} alt="" />
 						</div>
 						<div className='home-sec5-grid--content'>
-							<h3 style={{margin:'-10px 0'}}>Looking for a new flavour ?</h3>
+							<h3 style={{margin:'-10px 0'}}>ICONIC FLAVORS</h3>
 							<p>We use fresh, natural ingredients without preservatives, artificial flavours, or dyes to craft our delicious frozen creations.</p>
 						</div>
 					</div>

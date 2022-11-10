@@ -69,7 +69,13 @@ const Gallery = () => {
         },
     ]
   return (
-    <div>
+    <div className='mobile-section2'>
+     <div
+        className="location_row1 py-5 mb-3"
+        style={{ backgroundColor: "#F6E8DF" }}
+      >
+        <h2 className="fw-bolder">Gallery</h2>
+      </div>
         <div className='join-grid d-flex flex-wrap gap-4 py-md-5 p-2 justify-content-center'>
                 <img src={join_grid_1} alt="" />
                 <img src={join_grid_2} alt="" />
@@ -78,7 +84,10 @@ const Gallery = () => {
                 <img src={join_grid_5} alt="" />
                 <img src={join_grid_6} alt="" />
             </div>
+            <div className='my-5'>
+
             <Carousel carouselData={carouselSection7} />
+            </div>
 
     </div>
   )

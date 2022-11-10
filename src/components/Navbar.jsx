@@ -41,7 +41,14 @@ const DesktopSideBar = ({ showSidebar, onClose }) => {
         {/* <div ref={ref} className='sidebar-content'> */}
         <ul className="sidebar-links-section">
           <li className="d-flex justify-content-between w-100 align-items-center">
-            <Link to="/shop">Menu</Link>
+            <Link
+              to="/shop"
+              onClick={() => {
+                onClose();
+              }}
+            >
+              Menu
+            </Link>
             <button
               className="btn p-0"
               onClick={() => handleSidebarMenu("menu")}
@@ -50,25 +57,67 @@ const DesktopSideBar = ({ showSidebar, onClose }) => {
             </button>
           </li>
           <li>
-            <Link to="/our_story">Our Story</Link>
+            <Link
+              to="/our_story"
+              onClick={() => {
+                onClose();
+              }}
+            >
+              Our Story
+            </Link>
           </li>
           <li className="d-flex justify-content-between w-100 align-items-center">
-            <Link to="/locations">Location</Link>
+            <Link
+              to="/locations"
+              onClick={() => {
+                onClose();
+              }}
+            >
+              Location
+            </Link>
             {/* <button className='btn p-0' onClick={() => handleSidebarMenu("location")}>
                                 <BsChevronRight className='nav-icon p-0' />
                             </button> */}
           </li>
           <li>
-            <Link to="/franchising">Franchising</Link>
+            <Link
+              to="/franchising"
+              onClick={() => {
+                onClose();
+              }}
+            >
+              Franchising
+            </Link>
           </li>
           <li>
-            <Link to="/jobs">Jobs</Link>
+            <Link
+              to="/jobs"
+              onClick={() => {
+                onClose();
+              }}
+            >
+              Jobs
+            </Link>
           </li>
           <li>
-            <Link to="/gallery">Gallery</Link>
+            <Link
+              to="/gallery"
+              onClick={() => {
+                onClose();
+              }}
+            >
+              Gallery
+            </Link>
           </li>
           <li>
-            <Link to="/contact-us">Contact Us</Link>
+            <Link
+              to="/contact-us"
+              onClick={() => {
+                onClose();
+              }}
+            >
+              Contact Us
+            </Link>
           </li>
         </ul>
         <div
@@ -97,7 +146,7 @@ const DesktopSideBar = ({ showSidebar, onClose }) => {
             </li>
             <li>
               <Link to="/">New Arrivals</Link>
-            </li>           
+            </li>
           </ul>
           <h3>Collections</h3>
           <ul>
@@ -106,7 +155,7 @@ const DesktopSideBar = ({ showSidebar, onClose }) => {
             </li>
             <li>
               <Link to="/">Best Sellers</Link>
-            </li>            
+            </li>
             <li>
               <Link to="/">Single Servings</Link>
             </li>
@@ -258,8 +307,8 @@ const Navbar = () => {
               <div className="menu-btn-bar"></div>
             </div>
             <div className="nav-logo">
-            <Link to="/">
-              <img src={Logo} alt="Logo" />
+              <Link to="/">
+                <img src={Logo} alt="Logo" />
               </Link>
             </div>
           </div>
@@ -267,7 +316,14 @@ const Navbar = () => {
             <div className={`mob-menu ${showMobMenu && "show-mob-menu"}`}>
               <ul className="nav-links-section">
                 <li className="d-flex justify-content-between w-100 align-items-center">
-                  <Link to="/shop">Menu</Link>
+                  <Link
+                    to="/shop"
+                    onClick={() => {
+                      setShowMobMenu(false);
+                    }}
+                  >
+                    Menu
+                  </Link>
                   <button
                     className="btn p-0"
                     onClick={() => handleSubMenu("Shop")}
@@ -275,10 +331,19 @@ const Navbar = () => {
                     <BsChevronRight className="nav-icon p-0" />
                   </button>
                 </li>
-                <li>
+                <li
+                  onClick={() => {
+                    setShowMobMenu(false);
+                  }}
+                >
                   <Link to="/our_story">Our Story</Link>
                 </li>
-                <li className="d-flex justify-content-between w-100 align-items-center">
+                <li
+                  className="d-flex justify-content-between w-100 align-items-center"
+                  onClick={() => {
+                    setShowMobMenu(false);
+                  }}
+                >
                   <Link to="/locations">Location</Link>
                   {/* <button
                     className="btn p-0"
@@ -287,16 +352,32 @@ const Navbar = () => {
                     <BsChevronRight className="nav-icon p-0" />
                   </button> */}
                 </li>
-                <li>
+                <li
+                  onClick={() => {
+                    setShowMobMenu(false);
+                  }}
+                >
                   <Link to="/franchising">Franchising</Link>
                 </li>
-                <li>
+                <li
+                  onClick={() => {
+                    setShowMobMenu(false);
+                  }}
+                >
                   <Link to="/jobs">Jobs</Link>
                 </li>
-                <li>
+                <li
+                  onClick={() => {
+                    setShowMobMenu(false);
+                  }}
+                >
                   <Link to="/gallery">Gallery</Link>
                 </li>
-                <li>
+                <li
+                  onClick={() => {
+                    setShowMobMenu(false);
+                  }}
+                >
                   <Link to="/contact-us">Contact Us</Link>
                 </li>
               </ul>
